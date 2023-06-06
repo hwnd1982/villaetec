@@ -1,0 +1,147 @@
+.about-main
+  &__item
+    position: relative
+    z-index: 1
+    &-img
+      position: absolute
+      right: 0
+      left: 0
+      bottom: 0
+      top: calc(100% - 200px)
+      z-index: -1
+      background-size: cover
+      background-position: bottom 20% center
+    &-container
+      display: flex
+      justify-content: center
+    &-info
+      background-repeat: no-repeat
+      min-height: 350px
+      background-position: top 60px center
+      padding: 160px 0 255px
+      text-align: center
+  &__text
+    line-height: 142%
+    margin-bottom: 17px
+
+    &:last-child
+      margin-bottom: 0
+  &__link
+    color: $prime
+    &:hover
+      color: $prime
+    &>:first-child
+      margin-right: 13px
+
+  ._production &
+    &__item
+      &-img
+        background-image: url(../img/about-main/item-01.png)
+      &-info
+        background-image: url(../img/about-main/icon-01.png)
+    &__text
+      max-width: 310px
+
+  ._warranty &
+    &__item
+      &-img
+        background-image: url(../img/about-main/item-02.png)
+      &-info
+        background-image: url(../img/about-main/icon-02.png)
+    &__text
+      max-width: 290px
+
+  ._representatives &
+    &__item
+      &-img
+        background-image: url(../img/about-main/item-03.png)
+      &-info
+        background-image: url(../img/about-main/icon-03.png)
+    &__text
+      max-width: 320px
+
+@media screen and ( min-width: 767px )
+  .about-main
+    &__item
+      &-container
+        justify-content: center
+      &-info
+        background-repeat: no-repeat
+        padding: 160px 0 355px
+        text-align: center
+      &-img
+        top: 0
+        bottom: 0
+        top: calc(100% - 300px)
+        background-position: bottom 30% center
+    ._production &, ._warranty &, ._representatives &
+      &__text
+        max-width: 461px
+
+@media screen and ( min-width: 992px )
+  .about-main
+    &__item
+      &-container
+        justify-content: flex-start
+      &-info
+        flex-basis: 50%
+        text-align: left
+      &-img
+        top: 0
+        bottom: 0
+        background-position: bottom 20% center
+      &:nth-child(odd) &
+        &-img
+          left: 0
+          right: 50%
+        &-container
+          flex-direction: row-reverse
+      &:nth-child(even) &
+        &-img
+          left: 50%
+          right: 0
+        &-container
+          flex-direction: row
+
+    ._production &
+      &__item
+        &-info
+          background-position: top 64px left 95px
+          padding: 164px 40px 40px 95px
+        &-img
+          background-position: center 70%
+
+    ._warranty &
+      &__item
+        &-info
+          background-position: top 60px left
+          padding: 160px 40px 40px 0
+        &-img
+          background-size: 772px 515px
+          background-position: 92% 100%
+
+    ._representatives &
+      &__item
+        &-info
+          background-position: top 44px left 95px
+          padding: 144px 40px 40px 95px
+        &-img
+          background-position: center 35%
+
+@media screen and ( min-width: 1200px )
+  .about-main
+    ._production &
+      &__item
+        &-info
+          padding: 184px 40px 40px 95px
+          background-position: top 84px left 95px
+    ._warranty &
+      &__item
+        &-info
+          padding: 180px 40px 40px 0
+          background-position: top 80px left
+    ._representatives &
+      &__item
+        &-info
+          padding: 164px 40px 40px 95px
+          background-position: top 64px left 95px

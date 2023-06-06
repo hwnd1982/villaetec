@@ -1,0 +1,12 @@
+@mixin text-linear-border($color, $weight)
+  -webkit-text-stroke: $weight $color
+  -webkit-background-clip: #fff0
+  -webkit-text-fill-color: #fff0
+  background-clip: #fff0
+  text-fill-color: #fff0
+
+@mixin text-line-overflow($count)
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: $count
+  -webkit-box-orient: vertical

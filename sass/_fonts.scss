@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'TTNorms Regular';
+	src: url('../fonts/TTNorms/TTNorms-Regular.eot');
+	src: url('../fonts/TTNorms/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TTNorms/TTNorms-Regular.woff') format('woff'),
+		url('../fonts/TTNorms/TTNorms-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TTNorms Bold';
+	src: url('../fonts/TTNorms/TTNorms-Bold.eot');
+	src: local('TTNorms Bold'), local('TTNorms-Bold'),
+		url('../fonts/TTNorms/TTNorms-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TTNorms/TTNorms-Bold.woff') format('woff'),
+		url('../fonts/TTNorms/TTNorms-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TTNorms Extra Bold';
+	src: url('../fonts/TTNorms/TTNorms-ExtraBold.eot');
+	src: local('TTNorms Extra Bold'), local('TTNorms-ExtraBold'),
+		url('../fonts/TTNorms/TTNorms-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TTNorms/TTNorms-ExtraBold.woff') format('woff'),
+		url('../fonts/TTNorms/TTNorms-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TTNorms Black';
+	src: url('../fonts/TTNorms/TTNorms-Black.eot');
+	src: local('TTNorms Black'), local('TTNorms-Black'),
+		url('../fonts/TTNorms/TTNorms-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TTNorms/TTNorms-Black.woff') format('woff'),
+		url('../fonts/TTNorms/TTNorms-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@mixin nor4 {
+	font-family: 'TTNorms Regular';
+}
+
+@mixin nor7 {
+	font-family: 'TTNorms Bold';
+}
+
+@mixin nor8 {
+	font-family: 'TTNorms Extra Bold';
+}
+
+@mixin nor9 {
+	font-family: 'TTNorms Black';
+}

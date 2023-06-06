@@ -1,0 +1,223 @@
+.footer
+  padding: 41px 0 34px
+  background-color: #F5F5F5
+  &__container
+  &__top
+    padding-bottom: 40px
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: 'catalog' 'nav' 'contacts'
+  &__contacts
+    grid-area: contacts
+    padding-top: 5px
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 40px
+    border-top: 1px solid #D9D9D9
+  &__logo
+    margin-bottom: 32px
+  &__social
+  &__catalog
+    grid-area: catalog
+  &__nav
+    grid-area: nav
+    margin-bottom: 37px
+    &-link
+      display: block
+      color: $text
+      +nor7
+      font-size: 16px
+      line-height: 110%
+      transition: .4s
+      text-align: center
+      &:hover
+        color: $prime
+    &-item
+      margin-bottom: 24.4px
+      &:last-child
+        margin-bottom: 0
+  &__bottom
+    padding-top: 40px
+    border-top: 1px solid #D9D9D9
+    display: flex
+    align-items: center
+    flex-direction: column
+    &>:not(:last-child)
+      margin-bottom: 17px
+    &-link
+      font-size: 14px
+      line-height: 17px
+      color: $prime
+      transition: 0.4s
+      background-repeat: no-repeat
+      background-image: linear-gradient(currentColor, currentColor)
+      background-size: 0% 1px
+      background-position: bottom center
+      &:hover
+        color: $prime
+        background-size: 100% 1px
+    &-text
+      font-size: 14px
+      line-height: 17px
+      color: #989898
+
+.contacts
+  &__links
+    margin-bottom: 26px
+  &__list
+  &__item
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+
+.contact-link
+  display: grid
+  grid-template-columns: min-content 1fr
+  grid-template-areas: 'icon label' 'icon text'
+  gap: 3px 9px
+  &__icon
+    grid-area: icon
+    color: #BFBFBF
+  &__label
+    grid-area: label
+    color: #9D9D9D
+    font-size: 12px
+    line-height: 110%
+  &__text
+    grid-area: text
+    color: $text
+    +nor7
+    font-size: 20px
+    line-height: 110%
+    transition: .4s
+  &:hover &
+    &__text
+      color: $prime
+
+.social
+  display: flex
+  align-items: center
+  &__item
+    margin-right: 10px
+    &:last-child
+      margin-right: 0
+  &__link
+    display: block
+    color: #BFBFBF
+    border: 1px solid currentColor
+    border-radius: 5px
+    transition: .4s
+    &:hover
+      color: $prime
+
+.footer-catalog
+  display: grid
+  padding: 25px 0 30px
+  grid-template-columns: repeat(2, minmax(165px, 1fr))
+  gap: 15px
+  padding-top: 25px
+  &__list
+    display: grid
+    grid-template-rows: repeat(6, min-content)
+
+    &:first-child
+      grid-row: span 2
+  &__category
+    font-size: 0
+    max-width: 190px
+    &:not(:last-child)
+      margin-bottom: 17.5px
+  &__item-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__link
+    font-size: 14px
+    line-height: 110%
+    color: $text
+    transition: .4s
+    &:hover
+      color: $prime
+  &__turn
+    padding: 5px 5px 4px
+    margin-right: 20px
+    &:hover
+      stroke-width: 2px
+  &__icon
+    color: $prime
+    transform: rotate(180deg)
+    transition: .4s
+    ._active &
+      transform: rotate(0deg)
+  &__subcategory
+    font-size: 0
+    &:not(:last-child)
+      margin-bottom: 7px
+      margin-bottom: 9px
+    &-list
+      padding: 15px 35px 4px 10px
+      &-wrap
+        overflow: hidden
+        height: 0
+        ._active + &
+          height: 100%
+
+@media screen and ( min-width: 576px )
+  .footer
+    padding: 46px 0 34px
+    &__top
+      grid-template-columns: 2fr 1fr
+      grid-template-areas: 'catalog catalog' 'contacts nav'
+      padding-bottom: 38px
+    &__contacts
+      align-items: flex-start
+    &__nav
+      margin-bottom: 40px
+      &-link
+        text-align: left
+      &-item
+        margin-bottom: 20px
+    &__bottom
+      padding-top: 30px
+
+  .footer-catalog
+    padding: 20px 0 60px
+    grid-template-columns: repeat(3, minmax(180px, 1fr))
+    gap: 0
+    &__list
+      grid-template-rows: repeat(5, min-content)
+    &__link
+      font-size: 16px
+    &__turn
+      margin-right: 25px
+    &__category
+      &:not(:last-child)
+        margin-bottom: 15px
+    &__subcategory
+      &:not(:last-child)
+        margin-bottom: 7px
+      &-list
+        padding: 12px 35px 2px 10px
+
+@media screen and ( min-width: 992px )
+  .footer
+    &__top
+      grid-template-columns: 33fr 77fr 19fr
+      grid-template-areas: 'contacts catalog nav'
+    &__bottom
+      flex-direction: row
+      justify-content: space-between
+      &>:not(:last-child)
+        margin-bottom: 0
+      &>:first-child
+        flex-basis: 260px
+      &>:first-child
+        text-align: left
+      &>:last-child
+        text-align: right
+
+  .footer-catalog
+    padding-bottom: 0
+    grid-template-columns: repeat(3, minmax(180px, 220px))

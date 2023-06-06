@@ -1,0 +1,66 @@
+
+.input
+  width: 100%
+  padding: 19px 20px
+  line-height: 20px
+  font-size: 16px
+  color: $text
+  resize: none
+  border: 1px solid #D9D9D9
+  border-radius: 5px
+  &::placeholder
+    color: #9D9D9D
+  &._multiline
+    grid-row: 1 / -1
+
+.privacy
+  display: flex
+  align-items: baseline
+  &__checkbox
+    position: relative
+    width: 10px
+    height: 10px
+    margin: 2px 12px 2px 2px
+    z-index: 0
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: -2px
+      z-index: 1
+    &::before
+      height: 14px
+      width: 14px
+      border: 1px solid $prime
+      border-radius: 2px
+      background-color: #fff
+    &::after
+      height: 14px
+      width: 14px
+      background-image: url(../img/icons/checked.svg)
+      background-position: 3px 4px
+      background-size: 8px 6px
+      background-repeat: no-repeat
+      transition: .4s
+      max-width: 0
+    &:checked
+      &::after
+        max-width: 14px
+  &__label
+    font-size: 12px
+    line-height: 14px
+    color: #9D9D9D
+  &__link
+    position: relative
+    font-size: 12px
+    line-height: 14px
+    color: $prime
+    transition: .4s
+    background: no-repeat 0 100%
+    background-image: linear-gradient(currentColor, currentColor)
+    background-size: 100% 1px
+    background-position: bottom center
+
+    &:hover
+      color: $prime
+      background-size: 0% 1px

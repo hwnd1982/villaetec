@@ -1,0 +1,121 @@
+.offer
+  position: relative
+  background-image: url(../img/offer/background.png)
+  // background-size: cover
+  background-size: 1265px 843px
+  background-position: bottom right 38%
+  background-repeat: no-repeat
+  z-index: 1
+  text-align: center
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(10px)
+    z-index: -1
+  &__container
+    display: grid
+    grid-template-areas: '.' 'swiper'
+    grid-template-columns: 100%
+    grid-template-rows: 1fr 1fr
+  &__swiper
+    grid-area: swiper
+    width: 100%
+  &__slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 40px 0 103px
+  &__title
+    +nor7
+    font-size: 26px
+    line-height: 110%
+    color: #fff
+    margin-bottom: 19px
+  &__description
+    color: #fff
+    margin-bottom: 30px
+    max-width: 315px
+  &__link
+    max-width: 300px
+  &__controls
+    position: absolute
+    bottom: 42px
+    left: 50%
+    z-index: 10
+    display: flex
+    align-items: center
+    transform: translateX(-50%)
+  &__pagination
+    display: flex
+    z-index: 10
+    &-wrap
+      max-width: 140px
+      overflow: hidden
+  &__dot
+    position: relative
+    width: 10px
+    height: 10px
+    border: 1px solid #fff
+    border-radius: 2px
+    flex-shrink: 0
+    margin: 0 10px 0
+    transition: .4s
+    opacity: 0
+    cursor: pointer
+    &._active-main, &._active-next, &._active-prev
+      opacity: 1
+    &._active
+      background-color: #fff
+  &__arrow
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #fff
+    padding-right: 24px
+    &._right
+      transform: rotate(180deg)
+
+@media screen and ( min-width: 576px )
+  .offer
+    &__title
+      font-size: 32px
+
+@media screen and ( min-width: 992px )
+  .offer
+    background-size: 121.875vw 81.25vw
+    background-position: top 40% left
+    text-align: left
+    &::after
+      top: 0
+      left: 0
+      right: 50%
+      bottom: 0
+    &__container
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: 'swiper .'
+      grid-template-rows: 1fr
+    &__slide
+      align-items: flex-start
+      padding: 140px 75px 161px 0
+    &__controls
+      left: 0
+      transform: none
+      bottom: 51px
+
+@media screen and ( min-width: 1200px )
+  .offer
+    &__title
+      font-size: 34px
+
+@media screen and ( min-width: 1400px )
+  .offer
+    &__slide
+      padding: 140px 95px 161px 0
+    &__title
+      font-size: 44px

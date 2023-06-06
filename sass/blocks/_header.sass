@@ -1,0 +1,236 @@
+.header
+  position: sticky
+  --container-width: calc(100% - 2rem)
+  top: -.1px
+  padding: 15px 0
+  transition: .4s
+  background-color: #fff0
+  z-index: 50
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    bottom: -1px
+    left: 50%
+    height: 0
+    max-width: var(--container-width)
+    width: 100%
+    border-bottom: 1px solid $border
+    transform: translateX(-50%)
+    transition: .4s
+  &__container
+    display: grid
+    align-items: center
+    grid-template-columns: 100%
+  &__logo
+    width: 165px
+    // height: 14px
+    transition: .4s
+
+  &__right, &__left
+    display: none
+
+  &__center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &._main
+    &::after
+      border-color: #fff0
+
+  &._scroll
+    background-color: #fff
+    padding-bottom: 15px
+    &::after
+      max-width: 100%
+
+  ._main &
+    &__menu
+      &-link
+        position: relative
+        color: #fff
+        text-shadow: 0 0 .65px #fff, 0 0 .65px #fff
+        &:hover
+          color: #fff
+          &::after
+            color: #fff
+
+    &__logo
+      color: #fff
+
+  &._main._scroll
+    padding-bottom: 15px
+    &::after
+      border-color: $border
+
+  ._main._scroll &
+    &__menu
+      &-link
+        color: $text
+        text-shadow: none
+        &:hover
+          color: $prime
+          &::after
+            color: $prime
+
+    &__logo
+      color: $text
+
+.mobile-menu-btn
+  position: relative
+  overflow: hidden
+  padding: 0
+  width: 30px
+  height: 30px
+  color: $text
+  border: 1px solid currentColor
+  border-radius: 3px
+  transition: .4s
+  &__icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -webkit-tap-highlight-color: #fff0
+    transition-property: all color
+    transition-duration: .4s 0s
+    user-select: none
+    ._active &
+      transform: translate(-50%, -50%) rotate(45deg)
+  &__line
+    fill: none
+    transition: .4s
+    stroke: currentColor
+    stroke-width: 3.5
+    stroke-linecap: round
+    &._top
+      stroke-dasharray: 40 160
+    &._middle
+      stroke-dasharray: 40 142
+      transform-origin: 50%
+    &._bottom
+      stroke-dasharray: 40 85
+      transform-origin: 50%
+  &._active &
+    &__line
+      &._top
+        stroke-dashoffset: -64px
+      &._middle
+        transform: rotate(90deg)
+      &._bottom
+        stroke-dashoffset: -64px
+  ._main &
+    color: #fff
+  ._main._scroll &
+    color: $text
+
+  // position: relative
+  // padding: 0
+  // width: 30px
+  // height: 30px
+  // color: $text
+  // border: 1px solid currentColor
+  // border-radius: 3px
+  // transition: .4s
+  // & span
+  //   position: absolute
+  //   height: 0
+  //   width: 14px
+  //   left: 8px
+  //   border-top: 1px solid currentColor
+  //   &:first-child
+  //     top: 9px
+  //   &:nth-child(2)
+  //     top: 50%
+  //     transform: translateY(-50%)
+  //   &:last-child
+  //     bottom: 9px
+  // ._main &
+  //   color: #fff
+  // ._main._scroll &
+  //   color: $text
+
+@media screen and ( min-width: 576px )
+  .header
+    --container-width: 540px
+    &__logo
+      width: 200px
+
+@media screen and ( min-width: 768px )
+  .header
+    --container-width: 688px
+
+@media screen and ( min-width: 992px )
+  .header
+    top: -9px
+    --container-width: 928px
+    padding: 23px 0
+    &__container
+      grid-template-columns: 1fr 200px 1fr
+    &__menu
+      &-list
+        display: grid
+        align-items: center
+      &-link
+        color: $text
+        font-size: 14px
+        line-height: 17px
+        transition: .4s
+        &::after
+          content: ''
+          position: absolute
+          width: 100%
+          bottom: 1px
+          left: 50%
+          transition: .4s
+          transform: translateX(-50%) scale(0)
+          border-bottom: 1px solid currentColor
+        &:hover
+          color: $prime
+          &::after
+            color: $prime
+            transform: translateX(-50%) scale(1)
+    &__left
+      display: grid
+    &__left &
+      &__menu
+        &-list
+          grid-template-columns: repeat(4, max-content)
+          gap: 20px
+    &__right
+      display: grid
+      align-items: center
+      grid-template-columns: 1fr 100px
+      gap: 34px
+    &__right &
+      &__menu
+        &-list
+          grid-template-columns: repeat(2, max-content)
+          justify-content: end
+          gap: 20px
+    &__center
+      justify-content: center
+    &__mobile-menu-btn
+      display: none
+
+@media screen and ( min-width: 1200px )
+  .header
+    --container-width: 1108px
+    &__left &
+      &__menu
+        &-list
+          grid-template-columns: 86px 75px 106px 118px
+          gap: 0
+    &__right
+      gap: 0
+    &__right &
+      &__menu
+        &-list
+          grid-template-columns: 157px 115px
+          justify-content: end
+          gap: 0
+
+@media screen and ( min-width: 1400px )
+  .header
+    --container-width: 1288px

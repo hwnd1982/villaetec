@@ -1,0 +1,89 @@
+.dealers
+  position: relative
+  padding: 56px 0 100%
+  padding-left: 10px
+  overflow: hidden
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__map
+    & svg
+      display: block
+      position: absolute
+      bottom: 56.65px
+      right: 50%
+      transform: translateX(calc(50% - 2px))
+      max-width: 100%
+      max-height: 100%
+      height: 53.16vw
+      min-width: 387px
+      min-height: 199.35px
+  &__title
+    +nor7
+    font-size: 26px
+    line-height: 110%
+    margin-bottom: 16px
+    text-align: center
+    max-width: 80%
+  &__subtitle
+    margin-bottom: 17px
+    text-align: center
+    max-width: 90%
+  &__link
+    position: absolute
+    top: 204px
+    left: 50%
+    transform: translateX(calc(-50% + 6px))
+    max-width: 300px
+    z-index: 5
+    &-map
+      display: block
+
+.region
+  fill: #68f36e
+  fill-opacity: 0
+  stroke: #fff
+  stroke-width: 1px
+  stroke-dashoffset: 1px
+  transition: 0.4s
+
+@media screen and ( min-width: 480px )
+  .dealers
+    padding: 56px 0 90%
+
+@media screen and ( min-width: 576px )
+  .dealers
+    padding: 56px 0 80%
+
+@media screen and ( min-width: 768px )
+  .dealers
+    padding: 56px 0 56.65px
+    &__title
+      font-size: 36px
+      margin-bottom: 12px
+    &__subtitle
+      margin-bottom: 15px
+    &__map
+      position: relative
+      & svg
+        position: static
+        transform: none
+        height: 460px
+    &__link
+      top: 15px
+
+@media screen and ( min-width: 992px )
+  .dealers
+    padding: 100px 0
+    &__title
+      font-size: 44px
+    &__map
+      & svg
+        height: auto
+    &__link
+      transform: translateX(-50%)
+
+  .region
+    &:hover
+      fill-opacity: 0.3

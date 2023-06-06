@@ -1,0 +1,84 @@
+.questions
+  position: relative
+  overflow: hidden
+  &__container
+    display: grid
+    grid-template-rows: 2.228125fr 1fr
+    grid-template-areas: "content" "."
+  &__img
+    min-height: 100%
+    // min-width: 100%
+    background-position: center
+    background-size: cover
+    grid-area: img
+    &-wrap
+      position: absolute
+      display: grid
+      grid-template-areas: "." "img"
+
+      grid-auto-rows: 2.228125fr 1fr
+      bottom: 0
+      left: 0
+      right: 0
+      top: 0
+      overflow: hidden
+      z-index: -1
+
+  &__content
+    grid-area: content
+    padding: 60px 0
+  &__title
+    text-align: center
+    margin-bottom: 35px
+  &__form
+  &__fieldset
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: repeat(4, min-content)
+    gap: 20px
+    margin-bottom: 24px
+  &__input
+  &__privacy
+    margin-top: -4px
+  &__sibmit
+
+@media screen and ( min-width: 480px )
+  .questions
+    &__fieldset
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: repeat(3, min-content)
+    &__container
+      grid-template-rows: 1.2fr 1fr
+    &__img
+      &-wrap
+        grid-auto-rows: 1.2fr 1fr
+
+@media screen and ( min-width: 992px )
+  .questions
+    position: relative
+    &__container
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto
+      grid-template-areas: 'content.'
+    &__content
+      padding: 77px 44px 84px 0
+    &__img
+      &-wrap
+        display: block
+        grid-auto-rows: auto
+        grid-template-areas: none
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 50%
+    &__title
+      text-align: left
+      margin-bottom: 42px
+    &__fieldset
+      margin-bottom: 18px
+
+@media screen and ( min-width: 1200px )
+  .questions
+    &__content
+      padding: 97px 65px 104px 0

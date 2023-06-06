@@ -1,0 +1,113 @@
+.catalog-offer
+  position: relative
+  background-image: url(../img/offer/background.png)
+  background-size: cover
+  background-position: 65%
+  display: flex
+  align-items: flex-end
+  overflow: hidden
+  z-index: 1
+  &__link
+    display: grid
+    padding: 14px 10px 15px
+    grid-auto-rows: min-content min-content
+    align-items: end
+    color: #fff
+    height: 125px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: -1
+      height: 125px
+      background: rgba(0, 0, 0, 0.1)
+      backdrop-filter: blur(10px)
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      top: 0
+      z-index: 1
+
+  &__title
+    +nor7
+    font-size: 14px
+    line-height: 110%
+    margin-bottom: 19px
+  &__text
+    color: #fff
+    height: 0
+    opacity: 0
+    transition-property: height, opacity
+    transition-duration: .4s, .4s
+    transition-delay: 4s, 0s
+  &__more
+    position: absolute
+    bottom: 15px
+    left: 10px
+    color: #fff
+    font-size: 12px
+    &>:first-child
+      margin-right: 9px
+  &__link:hover
+    color: #fff
+
+@media screen and ( min-width: 576px )
+  .catalog-offer
+    background-position: 70% 54%
+    background-size: 280%
+    &__link
+      padding: 30px 32px 30px 20px
+      height: 180px
+      &::after
+        height: 180px
+    &__title
+      font-size: 20px
+      margin-bottom: 26px
+    &__more
+      bottom: 30px
+      left: 25px
+      font-size: 16px
+      &>:first-child
+        margin-right: 7px
+
+@media screen and ( min-width: 992px )
+  .catalog-offer
+    transition-duration: .4s
+    transition-delay: .4s
+    &:hover
+      margin-top: -5px
+      transition-delay: 0s
+    &__link
+      transition-duration: .4s
+      transition-delay: .4s
+      padding-top: 40px
+      &::after
+        transition-duration: .4s
+        transition-delay: .4s
+      &:hover
+        transition-delay: 0s
+        height: 100%
+        color: #fff
+        &::after
+          height: 100%
+          transition-delay: 0s
+    &__more
+      transition: .4s
+    &__arrow-icon
+      transition: .4s
+    &__link:hover &
+      &__text
+        height: 100%
+        opacity: 1
+        transition-duration: .4s, .4s
+        transition-delay: 0s, .4s
+      &__more
+        text-shadow: 0 0 .7px #fff, 0 0 .7px #fff
+      &__arrow-icon
+        stroke-width: 2px
+        animation: link-arrow .8s

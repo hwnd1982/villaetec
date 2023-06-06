@@ -1,0 +1,31 @@
+.button
+  display: block
+  width: 100%
+  padding: 20px 20px 19px
+  border: 1px solid currentColor
+  border-radius: 5px
+  +nor7
+  text-align: center
+  line-height: 17px
+  text-transform: uppercase
+  transition: .4s
+  &._transparent
+    background-color: #fff0
+    color: #fff
+    &:hover
+      background-color: #fff
+      color: $prime
+      border-color: #fff
+  &._prime
+    background-color: $prime
+    color: #fff
+    border-color: #fff0
+    &:hover
+      background-color: #fff
+      color: $prime
+  &._outline
+    outline: 1px solid currentColor
+
+@media screen and ( min-width: 992px )
+  .button
+    line-height: 19px

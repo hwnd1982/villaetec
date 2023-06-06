@@ -1,0 +1,303 @@
+.catalog-item
+  position: relative
+  &__category
+    display: flex
+    align-items: center
+    min-height: 35.2px
+    +nor7
+    font-size: 16px
+    line-height: 110%
+    margin-bottom: 15px
+    z-index: 1
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 15px
+      width: 3px
+      height: 40px
+      background-color: $prime
+      z-index: -1
+  &__subcategory
+    font-size: 13px
+    &:not(:last-child)
+      margin-bottom: 7px
+  ._lawnmower &
+    &__subcategory
+      line-height: 100%
+  ._battery-appliances &
+    &__category
+      max-width: none
+    &__more
+      padding-top: 0
+  &__list-icon
+    display: none
+  &__link
+    position: relative
+    display: grid
+    grid-auto-rows: min-content min-content min-content 1fr
+    grid-template-areas: '.' '.' '.' 'link'
+    align-items: end
+    height: 100%
+    padding: 16px 11px 14px
+    z-index: 1
+    overflow: hidden
+    color: $text
+    &:hover
+      color: $text
+    &::after
+      content: ''
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: -1
+    ._chainsaws>&
+      &::after
+        background-image: url(../img/catalog/item-01.png)
+        width: 320.34px
+        height: 133.75px
+        transform: rotate(28.3deg) translate(-25%, 31%)
+    ._motor-scythes>&
+      &::after
+        background-image: url(../img/catalog/item-02.png)
+        width: 172.99px
+        height: 82.9px
+        transform: rotate(36.99deg) translate(-10%, 49%)
+    ._motor-scissors>&
+      &::after
+        background-image: url(../img/catalog/item-03.png)
+        width: 327.57px
+        height: 138.61px
+        transform: rotate(20.13deg) translate(-28%, 42%)
+    ._lawnmower>&
+      &::after
+        background-image: url(../img/catalog/item-04.png)
+        width: 171.7px
+        height: 147.28px
+        transform: translate(-13%, -30%)
+        background-position: bottom
+    ._generator>&
+      &::after
+        background-image: url(../img/catalog/item-05.png)
+        width: 171.7px
+        height: 147.28px
+        transform: translate(-23%, -23%)
+        background-position: bottom
+    ._cultivator>&
+      &::after
+        background-image: url(../img/catalog/item-06.png)
+        width: 157.53px
+        height: 138.81px
+        transform: translate(-10%, -29%)
+        background-position: bottom
+    ._motoblocks>&
+      &::after
+        background-image: url(../img/catalog/item-07.png)
+        width: 210.8px
+        height: 157.44px
+        transform: translate(-17%, -36%)
+        background-position: bottom
+    ._snow-blowers>&
+      &::after
+        background-image: url(../img/catalog/item-08.png)
+        width: 173.03px
+        height: 160.66px
+        transform: translate(-22%, -25%) rotateY(180deg)
+        background-position: bottom
+    ._motor-pumps>&
+      &::after
+        background-image: url(../img/catalog/item-09.png)
+        width: 175.23px
+        height: 166.54px
+        transform: translate(-7%, -20%)
+        background-position: bottom
+    ._battery-appliances>&
+      &::after
+        background-image: url(../img/catalog/item-10.png)
+        width: 274.77px
+        height: 163.65px
+        transform: translate(-19%, 1%) rotate(14.09deg)
+        background-position: bottom
+    ._blower>&
+      &::after
+        background-image: url(../img/catalog/item-11.png)
+        width: 310.53px
+        height: 197.5px
+        transform: translate(-73%, -36%)
+        background-position: bottom right
+    ._woodworking-equipment>&
+      &::after
+        background-image: url(../img/catalog/item-12.png)
+        width: 238px
+        height: 158px
+        transform: translate(-26%, -27%)
+        background-position: bottom
+    &-text
+      grid-area: link
+      color: $prime
+      transition: .4s
+      &>:first-child
+        margin-right: 9px
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+      &::before
+        z-index: -1
+        background-color: #f5f5f5
+        transition: .4s
+        border: 1px solid #fff0
+      &::after
+        z-index: 1
+  &__more
+    color: $prime
+    font-size: 13px
+    max-width: 75%
+    line-height: 100%
+    &>:first-child
+      margin-right: 5px
+  &__list-icon
+    transform: rotate(180deg)
+
+@media screen and ( min-width: 576px )
+  .catalog-item
+    &__category
+      min-height: 44px
+      font-size: 20px
+      margin-bottom: 12px
+      &::after
+        top: 30px
+    &__subcategory
+      font-size: 16px
+      &:not(:last-child)
+        margin-bottom: 9px
+    ._lawnmower &
+      &__subcategory
+        line-height: 140%
+    ._battery-appliances &
+      &__category
+        max-width: 75%
+      &__more
+        padding-top: 3px
+    &__list-icon
+      display: inline-block
+    &__more
+      font-size: 16px
+      max-width: none
+    &__link
+      padding: 29px 25px 30px
+      &-text
+        &>:first-child
+          margin-right: 6px
+      ._chainsaws>&
+        &::after
+          width: 566.48px
+          height: 258.8px
+          transform: rotate(28.3deg) translate(-26%, 23%)
+          // transform: rotate(28.3deg) translate(-24%, 15%)
+      ._motor-scythes>&
+        &::after
+          width: 305.84px
+          height: 146.69px
+          transform: rotate(36.99deg) translate(-11%, 47%)
+      ._motor-scissors>&
+        &::after
+          width: 611.23px
+          height: 275.52px
+          transform: rotate(20.13deg) translate(-29%, 33%)
+      ._lawnmower>&
+        &::after
+          width: 318px
+          height: 263px
+          transform: translate(-14%, -31%)
+          // background-position: bottom
+      ._generator>&
+        &::after
+          width: 303px
+          height: 261px
+          transform: translate(-24%, -25%)
+          // background-position: bottom
+      ._cultivator>&
+        &::after
+          width: 278px
+          height: 246px
+          transform: translate(-10%, -30%)
+          // background-position: bottom
+      ._motoblocks>&
+        &::after
+          width: 372px
+          height: 279px
+          transform: translate(-17%, -38%)
+          // background-position: bottom
+      ._snow-blowers>&
+        &::after
+          width: 300px
+          height: 280px
+          transform: translate(-21%, -26%) rotateY(180deg)
+          // background-position: bottom
+      ._motor-pumps>&
+        &::after
+          width: 318px
+          height: 291px
+          // transform: translate(-7%, -20%)
+          // background-position: bottom
+      ._battery-appliances>&
+        &::after
+          width: 485px
+          height: 286.94px
+          // transform: translate(-20%, 0%) rotate(14.09deg)
+          // background-position: bottom
+      ._blower>&
+        &::after
+          width: 548px
+          height: 350px
+          transform: translate(-73%, -37%)
+          // background-position: bottom right
+      ._woodworking-equipment>&
+        &::after
+          width: 420px
+          height: 274px
+          // transform: translate(-26%, -30%)
+          // background-position: bottom
+
+@media screen and ( min-width: 992px )
+  .catalog-item
+    &__link
+      &::after
+        transition: .4s
+        filter: grayscale(1)
+      &:hover
+        color: $text
+        &::after
+          opacity: 1
+          filter: grayscale(0)
+      &-text
+        &:hover
+          color: $prime
+          text-shadow: 0 0 .7px $prime, 0 0 .7px $prime
+          &::before
+            background-color: #fff
+            border-color: #f5f5f5
+    &__link:hover &
+      &__arrow-icon, &__list-icon
+        stroke-width: 2px
+      &__more
+        text-shadow: 0 0 .7px $prime, 0 0 .7px $prime
+        transition: .4s
+      &__arrow-icon, &__list-icon
+        transition: .4s
+
+@media screen and ( min-width: 1200px )
+@media screen and ( min-width: 1400px )
+  .catalog-item
+    &__category
+      font-size: 20px
+    &__more
+      &>:first-child
+        margin-right: 10px

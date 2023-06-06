@@ -1,0 +1,48 @@
+.search
+  display: flex
+  border: 1px solid #D7D7D7
+  border-radius: 5px
+  padding: 8px 10px 8px 9px
+  &__input
+    width: 100%
+    padding: 0
+    border: none
+    font-size: 12px
+    line-height: 14px
+    color: $text
+    background-color: #fff0
+    transition: .4s
+    &::placeholder
+      color: $placeholder
+      transition: .4s
+  &__submit
+    padding: 0
+    line-height: 14px
+    color: $placeholder
+    transition: .4s
+    &:hover
+      color: $prime
+
+  ._main &
+    &__input
+      color: #fff
+      text-shadow: 0 0 .65px #fff, 0 0 .65px #fff
+      &::placeholder
+        color: #fff
+        text-shadow: 0 0 .65px #fff, 0 0 .65px #fff
+    &__submit
+      color: #fff
+      &:hover
+        color: $placeholder
+
+  ._main._scroll &
+    &__input
+      color: $text
+      text-shadow: none
+      &::placeholder
+        color: $placeholder
+        text-shadow: none
+    &__submit
+      color: $placeholder
+      &:hover
+        color: $prime

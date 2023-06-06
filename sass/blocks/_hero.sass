@@ -1,0 +1,72 @@
+.hero
+  position: relative
+  padding: 264px 0 289px
+  margin-top: -78px
+  z-index: 1
+  overflow: hidden
+  &::after
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $text
+    opacity: .4
+    z-index: -1
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__video-background
+    position: absolute
+    min-height: 100%
+    min-width: 100%
+    object-fit: cover
+    object-position: center
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+  &__title
+    +nor9
+    font-size: 56px
+    line-height: 110%
+    text-align: center
+    text-transform: uppercase
+    +text-linear-border(#fff, .4px)
+    margin-bottom: 15px
+  &__subtitle
+    +nor7
+    font-size: 20px
+    line-height: 110%
+    text-align: center
+    color: #fff
+    margin-bottom: 36px
+  &__link
+    max-width: 220px
+    padding-left: 24px
+
+@media screen and ( min-width: 768px )
+  .hero
+    &__title
+      font-size: 80px
+
+@media screen and ( min-width: 992px )
+  .hero
+    padding: 205px 0 231px
+    &__title
+      font-size: 120px
+      margin-bottom: 5px
+    &__subtitle
+      font-size: 24px
+
+@media screen and ( min-width: 1200px )
+  .hero
+    &__title
+      font-size: 160px
+      margin-bottom: -4px
+    &__subtitle
+      font-size: 30px
+      margin-bottom: 50px
