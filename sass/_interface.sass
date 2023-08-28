@@ -21,6 +21,7 @@ body
   line-height: 1.4
   color: $text
   cursor: default
+
   // Запрет выделения текста
   //-webkit-touch-callout: none
   //-webkit-user-select: none
@@ -73,7 +74,8 @@ ul
   opacity: 0
   margin-top: -70px
 
-.scroll-hidden
+._scroll-hidden
+  overflow: hidden
 
 .main
   flex-shrink: 0
@@ -101,22 +103,62 @@ ul
     background-color: rgba(0, 0, 0, 0.3)
 
 .bread-crumbs
-  padding-top: 40px
-
+  display: flex
+  flex-wrap: wrap
   &__link
-    color: $text
     transition: .4s
+    font-size: 12px
+    line-height: 14px
+    color: $prime
+    padding-bottom: 4px
     &:hover
       color: $prime
+      text-shadow: 0 0 .65px currentColor, 0 0 .65px currentColor
     &:not(:last-child)::after
-      content: '\a0/'
+      content: url(../img/icons/bread-crumbs-divider-prime.svg)
+      vertical-align: middle
+      padding: 0 9px 0 8px
     &:last-child
       pointer-events: none
-      color: #9D9D9D
+      color: #BFBFBF
+
+  .contact-page &, .where-buy &
+    padding: 15px 0 29px
+  .warranty-service &
+    padding: 15px 0 28px
+  .news-page &, .goods-search &, .product &
+    padding: 15px 0 27px
+  .news-list &, .subcategory &
+    padding: 15px 0 36px
+  ._category &, .catalog &
+    padding: 16px 0 36px
+  .promotion &
+    padding: 15px 0 33px
+  .offer &
+    padding: 16px 0 0
+    &__link
+      color: #fff
+      &:hover
+        color: #fff
+      &:not(:last-child)::after
+        content: url(../img/icons/bread-crumbs-divider-white.svg)
+      &:last-child
+        pointer-events: none
+        color: #BFBFBF
+
+.section-divider
+  .product-reveiw + &
+    padding-bottom: 60px
+    background-color: #F9F9F9
+    scroll-behavior: smooth
 
 @media screen and ( min-width: 576px )
   .title
     font-size: 36px
+
+  .bread-crumbs
+    ._category &
+      padding: 20px 0 26px
 
 @media screen and ( min-width: 992px )
   body, p
@@ -127,3 +169,37 @@ ul
         animation: link-arrow .8s
   .title
     font-size: 44px
+
+  .bread-crumbs
+    &__link
+      &:not(:last-child)::after
+        padding: 0 9px
+
+    .subcategory &
+      padding: 20px 0 33px
+
+    .news-page &, .where-buy &
+      padding: 20px 0 34px
+
+    .warranty-service &
+      padding: 20px 0 0
+      position: absolute
+      top: 0
+      left: 1rem
+
+    .catalog &
+      padding: 20px 0 22px
+    .product &
+      padding: 20px 0 25px
+    .goods-search &
+      padding: 20px 0 36px
+    ._category &, .offer &, .news-list &
+      padding: 20px 0 31px
+    .promotion &
+      padding: 20px 0 29px
+    .contact-page &
+      padding: 20px 0 30px
+
+  .section-divider
+    .product-reveiw + &
+      padding-bottom: 63px

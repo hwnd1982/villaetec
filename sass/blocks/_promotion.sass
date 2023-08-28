@@ -1,0 +1,112 @@
+.promotion
+  background-color: #FAFAFA
+  padding-bottom: 58px
+  &__title
+    margin-bottom: 35px
+    text-align: center
+  &__list
+    display: grid
+    gap: 30px
+    max-width: 1070px
+    margin: 0 auto
+  &__item
+    display: grid
+    background-color: #fff
+    border-radius: 5px
+    overflow: hidden
+    grid-auto-rows: calc(250 / 375 * 100vw ) min-content
+    grid-template-areas: 'img' 'content'
+  &__img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    object-fit: cover
+    object-position: center
+    min-width: 100%
+    min-height: 100%
+    &-wrap
+      position: relative
+      grid-area: img
+      overflow: hidden
+  &__content
+    position: relative
+    grid-area: content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding: 25px 30px 76px
+    max-width: 95%
+
+  &__item
+    &-title
+      +nor7
+      font-size: 20px
+      line-height: 120%
+      margin-bottom: 0
+    &-description
+      padding-top: 10px
+    &-link
+      color: $prime
+      position: absolute
+      left: 30px
+      bottom: 33px
+      &>:first-child
+        margin-right: 10px
+      &:hover
+        color: $prime
+
+@media screen and ( min-width: 576px )
+  .promotion
+    &__item
+      grid-auto-rows: 2.5fr 2fr
+      &-link
+        padding-top: 29px
+        position: static
+    &__content
+      justify-content: center
+      padding: 40px
+      max-width: 100%
+      min-height: 250px
+
+@media screen and ( min-width: 768px )
+  .promotion
+    padding-bottom: 100px
+    &__title
+      margin-bottom: 55px
+    &__list
+      grid-auto-rows: 280px
+      gap: 20px
+    &__item
+      grid-template-rows: auto
+      &-description
+        padding-top: 19px
+      &-link
+        margin-top: 0
+      &:nth-child(odd)
+        grid-template-columns: 2.35fr 3fr
+        grid-template-areas: 'img content'
+      &:nth-child(even)
+        grid-template-columns: 3fr 2.35fr
+        grid-template-areas: 'content img'
+
+@media screen and ( min-width: 992px )
+  .promotion
+    &__list
+      grid-auto-rows: 350px
+    &__content
+      padding: 52px 50px 55px
+    &__item
+      &-title
+        font-size: 26px
+      &-link
+        &:hover
+          text-shadow: 0 0 .65px currentColor, 0 0 .65px currentColor
+
+@media screen and ( min-width: 1200px )
+  .promotion
+    &__content
+      max-width: 90%
+    &__item:nth-child(even)>&__content
+      padding-left: 80px

@@ -1,0 +1,198 @@
+.mobile
+  // mobile-menu
+  &-menu
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    padding: 65px 0 33px
+    background-color: #fff
+    z-index: 50
+    transform: translateY(-101%)
+    transition: .4s
+    &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__nav
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 37px
+      opacity: 0
+      transition: .2s
+      &-item
+        font-size: 0
+        &:not(:last-child)
+          margin-bottom: 24px
+      &-link
+        display: block
+        +nor7
+        font-size: 16px
+        line-height: 110%
+        text-align: center
+        color: $text
+        transition: 0.4s
+        &:hover
+          color: $prime
+    &__search
+      margin-bottom: 31px
+      width: 100%
+    &__catalog
+      &-header
+        display: flex
+        justify-content: center
+        &>:first-child
+          margin-right: 5px
+      &-turn
+        padding: 5px 5px 4px
+        margin-right: -5px
+        transition: .4s
+        &:hover
+          stroke-width: 2px
+      &-icon
+        color: $prime
+        transform: rotate(180deg)
+        transition: .4s
+        ._active &
+          transform: rotate(0deg)
+
+    ._open &
+      transform: translateY(0)
+      &__nav
+        transition: .4s
+        transition-delay: .2s
+        opacity: 1
+
+    // menu-btn 
+    &-btn
+      position: relative
+      overflow: hidden
+      padding: 0
+      width: 30px
+      height: 30px
+      color: $text
+      border: 1px solid currentColor
+      border-radius: 3px
+      transition: .4s
+      &__icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        -webkit-tap-highlight-color: #fff0
+        // transition-property: all, color
+        // transition-duration: .4s, 0s
+        user-select: none
+      &__line
+        fill: none
+        transition: .4s
+        stroke: currentColor
+        stroke-width: 3.5
+        stroke-linecap: round
+        &._top
+          stroke-dasharray: 40 160
+        &._middle
+          stroke-dasharray: 40 142
+          transform-origin: 50%
+        &._bottom
+          stroke-dasharray: 40 85
+          transform-origin: 50%
+      ._open &
+        &__icon
+          transform: translate(-50%, -50%) rotate(45deg)
+          // transition-duration: .4s, 0s
+        &__line
+          &._top
+            stroke-dashoffset: -64px
+          &._middle
+            transform: rotate(90deg)
+          &._bottom
+            stroke-dashoffset: -64px
+      ._main &
+        color: #fff
+      ._main._scroll &, ._main._open &
+        color: $text
+
+    // menu-overlay
+    &-overlay
+      position: fixed
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      min-height: 100vh
+      min-width: 100vw
+      background-color: $text
+      opacity: 0
+      z-index: -1
+      transform: translateZ(55px)
+      transition-property: all, z-index
+      transition-duration: .2s, 0s
+      transition-delay: .2s, .4s
+      .header._open ~ &
+        opacity: .7
+        z-index: 50
+        transition-delay: 0s, 0s
+
+    // menu-catalog
+    &-catalog
+      height: 0
+      overflow: hidden
+      ._active + &
+        height: 100%
+      &__wrap
+        display: grid
+        padding: 25px 0 4px
+        grid-template-columns: repeat(2, minmax(165px, 1fr))
+        gap: 15px
+      &__list
+        display: grid
+        grid-template-rows: repeat(6, min-content)
+      &__category
+        font-size: 0
+        max-width: 140px
+        &:not(:last-child)
+          margin-bottom: 17.5px
+      &__item-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+      &__link
+        font-size: 14px
+        line-height: 110%
+        color: $text
+        transition: .4s
+        &:hover
+          color: $prime
+      &__turn
+        padding: 5px 5px 4px
+        margin-right: -5px
+        transition: .4s
+        &:hover
+          stroke-width: 2px
+      &__icon
+        color: $prime
+        transform: rotate(180deg)
+        transition: .4s
+        ._active &
+          transform: rotate(0deg)
+      &__subcategory
+        font-size: 0
+        &:not(:last-child)
+          margin-bottom: 7px
+          margin-bottom: 9px
+        &-list
+          padding: 15px 5px 4px 10px
+          &-wrap
+            overflow: hidden
+            height: 0
+            ._active + &
+              height: 100%
+
+@media screen and ( min-width: 992px )
+  .mobile
+    &-menu
+      display: none
+      &-btn
+        display: none

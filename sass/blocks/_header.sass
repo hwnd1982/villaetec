@@ -1,11 +1,21 @@
 .header
+  --background: #fff
   position: sticky
   --container-width: calc(100% - 2rem)
   top: -.1px
   padding: 15px 0
   transition: .4s
-  background-color: #fff0
-  z-index: 50
+  z-index: 55
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: var(--background)
+    transition: .4s
+    z-index: 55
   &::after
     content: ''
     position: absolute
@@ -19,9 +29,12 @@
     transform: translateX(-50%)
     transition: .4s
   &__container
+    position: relative
     display: grid
     align-items: center
     grid-template-columns: 100%
+    z-index: 55
+    transition: .4s
   &__logo
     width: 165px
     // height: 14px
@@ -36,14 +49,20 @@
     align-items: center
 
   &._main
+    &::before
+      background-color: #fff0
     &::after
       border-color: #fff0
 
   &._scroll
-    background-color: #fff
-    padding-bottom: 15px
+    background-color: var(--background)
+  &._scroll, &._open
+    // padding-bottom: 15px
     &::after
       max-width: 100%
+  &._scroll
+    &::before
+      background-color: var(--background)
 
   ._main &
     &__menu
@@ -59,12 +78,13 @@
     &__logo
       color: #fff
 
+  &._main._scroll, &._main._open
+    // padding-bottom: 15px
   &._main._scroll
-    padding-bottom: 15px
     &::after
       border-color: $border
 
-  ._main._scroll &
+  ._main._scroll &, ._main._open &
     &__menu
       &-link
         color: $text
@@ -73,83 +93,11 @@
           color: $prime
           &::after
             color: $prime
-
     &__logo
       color: $text
 
-.mobile-menu-btn
-  position: relative
-  overflow: hidden
-  padding: 0
-  width: 30px
-  height: 30px
-  color: $text
-  border: 1px solid currentColor
-  border-radius: 3px
-  transition: .4s
-  &__icon
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    -webkit-tap-highlight-color: #fff0
-    transition-property: all color
-    transition-duration: .4s 0s
-    user-select: none
-    ._active &
-      transform: translate(-50%, -50%) rotate(45deg)
-  &__line
-    fill: none
-    transition: .4s
-    stroke: currentColor
-    stroke-width: 3.5
-    stroke-linecap: round
-    &._top
-      stroke-dasharray: 40 160
-    &._middle
-      stroke-dasharray: 40 142
-      transform-origin: 50%
-    &._bottom
-      stroke-dasharray: 40 85
-      transform-origin: 50%
-  &._active &
-    &__line
-      &._top
-        stroke-dashoffset: -64px
-      &._middle
-        transform: rotate(90deg)
-      &._bottom
-        stroke-dashoffset: -64px
-  ._main &
-    color: #fff
-  ._main._scroll &
-    color: $text
-
-  // position: relative
-  // padding: 0
-  // width: 30px
-  // height: 30px
-  // color: $text
-  // border: 1px solid currentColor
-  // border-radius: 3px
-  // transition: .4s
-  // & span
-  //   position: absolute
-  //   height: 0
-  //   width: 14px
-  //   left: 8px
-  //   border-top: 1px solid currentColor
-  //   &:first-child
-  //     top: 9px
-  //   &:nth-child(2)
-  //     top: 50%
-  //     transform: translateY(-50%)
-  //   &:last-child
-  //     bottom: 9px
-  // ._main &
-  //   color: #fff
-  // ._main._scroll &
-  //   color: $text
+  &._promotion, &._promotion-page, &._news-page, &._contact-page, &._where-buy, &._error, &._goods-search, &._subcategory
+    --background: #FAFAFA
 
 @media screen and ( min-width: 576px )
   .header
@@ -163,7 +111,7 @@
 
 @media screen and ( min-width: 992px )
   .header
-    top: -9px
+    top: -15px
     --container-width: 928px
     padding: 23px 0
     &__container
@@ -173,6 +121,7 @@
         display: grid
         align-items: center
       &-link
+        position: relative
         color: $text
         font-size: 14px
         line-height: 17px
@@ -201,8 +150,8 @@
     &__right
       display: grid
       align-items: center
-      grid-template-columns: 1fr 100px
-      gap: 34px
+      grid-template-columns: 1fr 120px
+      gap: 14px
     &__right &
       &__menu
         &-list
@@ -211,8 +160,15 @@
           gap: 20px
     &__center
       justify-content: center
-    &__mobile-menu-btn
-      display: none
+
+    &__search
+      justify-self: end
+    &._warranty-service
+      --background: #FAFAFA
+
+    ._scroll &
+      &__container
+        transform: translateY(7px)
 
 @media screen and ( min-width: 1200px )
   .header
@@ -224,10 +180,11 @@
           gap: 0
     &__right
       gap: 0
+      grid-template-columns: 1fr 130px
     &__right &
       &__menu
         &-list
-          grid-template-columns: 157px 115px
+          grid-template-columns: 157px 85px
           justify-content: end
           gap: 0
 

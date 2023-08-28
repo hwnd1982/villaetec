@@ -35,6 +35,22 @@
     &:last-child
       margin-bottom: 0
 
+  &._main
+    background-color: #F9F9F9
+  &._category, &._promotion-page
+    background-color: #fff
+
+  ._promotion-page &, ._catalog &
+    &__container
+      grid-template-rows: 20.2fr 12.2fr
+    &__img
+      &-wrap
+        grid-auto-rows: 20.2fr 12.2fr
+
+  ._subcategory &
+    &__content
+      padding: 55px 0 37px
+
 @media screen and ( min-width: 576px )
   .article-main
     &__container
@@ -42,6 +58,13 @@
     &__img
       &-wrap
         grid-auto-rows: 1fr 1.2fr
+
+    ._promotion-page &
+      &__container
+        grid-template-rows: 1fr 1.2fr
+      &__img
+        &-wrap
+          grid-auto-rows: 1fr 1.2fr
 
 @media screen and ( min-width: 992px )
   .article-main
@@ -67,7 +90,38 @@
       max-width: 98%
       margin-bottom: 15px
 
+    ._subcategory &
+      &__content
+        padding: 92px 0 99px 95px
+    ._promotion &
+      &__content
+        padding: 97px 0 97px 95px
+
+    ._catalog &
+      &__container
+        grid-template-rows: auto
+      &__img
+        &-wrap
+          grid-auto-rows: auto
+
+    ._promotion-page &
+      &__container
+        grid-template-rows: auto
+      &__img
+        &-wrap
+          grid-auto-rows: auto
+      &__content
+        padding: 87px 0 93px 95px
+
+    ._news &
+      &__content
+        padding: 97px 0 99px 95px
+
 @media screen and ( min-width: 1200px )
   .article-main
-    &__content
-      padding: 97px 0 98px 95px
+    ._main &
+      &__content
+        padding: 97px 0 98px 95px
+    ._category &
+      &__content
+        padding: 92px 0 98px 95px

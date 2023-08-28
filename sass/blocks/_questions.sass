@@ -1,6 +1,7 @@
 .questions
   position: relative
   overflow: hidden
+  z-index: 1
   &__container
     display: grid
     grid-template-rows: 2.228125fr 1fr
@@ -11,6 +12,7 @@
     background-position: center
     background-size: cover
     grid-area: img
+    z-index: 1
     &-wrap
       position: absolute
       display: grid
@@ -41,6 +43,9 @@
   &__privacy
     margin-top: -4px
   &__sibmit
+
+  &._where-buy, &._goods-search
+    background-color: #f9f9f9
 
 @media screen and ( min-width: 480px )
   .questions
@@ -78,7 +83,18 @@
     &__fieldset
       margin-bottom: 18px
 
+    ._promotion-page &
+      &__img
+        background-position: center left 60%
+      &__fieldset
+        margin-bottom: 21px
+    ._contact-page &
+      &__title
+        max-width: 535px
+      &__fieldset
+        margin-bottom: 21px
+
 @media screen and ( min-width: 1200px )
   .questions
     &__content
-      padding: 97px 65px 104px 0
+      padding: 97px 65px 105px 0

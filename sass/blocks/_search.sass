@@ -1,10 +1,12 @@
 .search
   display: flex
+  width: max-content
   border: 1px solid #D7D7D7
   border-radius: 5px
   padding: 8px 10px 8px 9px
   &__input
     width: 100%
+    max-width: 67px
     padding: 0
     border: none
     font-size: 12px
@@ -15,6 +17,8 @@
     &::placeholder
       color: $placeholder
       transition: .4s
+    &:focus
+      max-width: 87px
   &__submit
     padding: 0
     line-height: 14px
@@ -35,7 +39,7 @@
       &:hover
         color: $placeholder
 
-  ._main._scroll &
+  ._main._scroll &, ._main._open &
     &__input
       color: $text
       text-shadow: none
@@ -46,3 +50,132 @@
       color: $placeholder
       &:hover
         color: $prime
+
+  .mobile-menu &
+    padding: 10px 13px 9px
+    &__input
+      font-size: 16px
+      line-height: 19px
+    &__icon
+      height: 16px
+      width: 16px
+
+.region-search, .goods-search-form
+  position: relative
+  display: flex
+  width: 100%
+  padding: 20px 15px
+  z-index: 5
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    border: 1px solid #D9D9D9
+    border-radius: 5px
+    z-index: -2
+    transition: .4s
+  &__input
+    width: 100%
+    padding: 0
+    border: none
+    line-height: 19px
+    font-size: 16px
+    color: $text
+    background-color: #fff0
+    transition: .4s
+    &::-webkit-search-cancel-button
+      display: none
+  &__submit
+    padding: 0
+    line-height: 14px
+    color: $placeholder
+    transition: .4s
+    &:hover
+      color: $prime
+  &__placeholder
+    position: absolute
+    color: $placeholder
+    left: 15px
+    top: 50%
+    font-size: 16px
+    line-height: 19px
+    transform: translateY(-50%)
+    transition: .2s
+    z-index: -1
+    &>:last-child
+      display: none
+    &._hidden
+      opacity: 0
+  &__list
+    max-height: 219px
+    padding: 7px 15px 15px
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 5px
+      background-color: #fff
+      border: 1px solid #D9D9D9
+      border-radius: 5px
+    &::-webkit-scrollbar-thumb
+      background-color: #BEBEBE
+      border-radius: 5px
+    &-wrap
+      position: absolute
+      max-height: 237px
+      padding: 10px 5px 7px
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+      transition: .4s
+      background-color: #fff
+      border: 1px solid #D9D9D9
+      border-radius: 0px 0px 5px 5px
+      border-top: none
+      z-index: -3
+      transform: translateY(40px)
+  &__item
+    &:not(:last-child)
+      margin-bottom: 5px
+    &-link
+      display: block
+      padding: 5px 0
+      line-height: 19px
+      transition: .4s
+      color: $text
+      &:hover
+        color: $prime
+
+  &._active
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15)
+    z-index: 15
+    &::after
+      border-radius: 5px 5px 0px 0px
+  ._active &
+    &__list
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      &-wrap
+        height: auto
+        transform: translateY(60px)
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15)
+
+@media screen and ( min-width: 768px )
+  .region-search, .goods-search-form
+    padding: 20px
+    &__placeholder
+      left: 20px
+      &>:last-child
+        display: inline
+
+@media screen and ( min-width: 1200px )
+  .search
+    &__input
+      max-width: 67px
+      &:focus
+        max-width: 97px

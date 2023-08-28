@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Villartec</title>
+
+    <link href="./img/favicon.svg" rel="icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header _warranty-service">
+      <div class="mobile-menu header__mobile-menu">
+        <div class="container mobile-menu__container">
+          <form class="mobile-menu__search search" action="#" method="post" name="header-search">
+            <input class="search__input" type="search" placeholder="Поиск" />
+            <button class="search__submit" type="submit">
+              <svg class="search__icon" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#search"></use>
+              </svg>
+            </button>
+          </form>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__nav-item">
+              <div class="mobile-menu__catalog-header">
+                <a href="#" class="mobile-menu__nav-link">Каталог</a>
+                <button class="mobile-menu__catalog-turn" type="button">
+                  <svg class="mobile-menu__catalog-icon" height="6" width="11" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="mobile-menu-catalog">
+                <div class="mobile-menu-catalog__wrap">
+                  <ul class="mobile-menu-catalog__list">
+                    <li class="mobile-menu-catalog__category">
+                      <div class="mobile-menu-catalog__item-header">
+                        <a href="#" class="mobile-menu-catalog__link">Мотопилы</a>
+                        <button class="mobile-menu-catalog__turn" type="button">
+                          <svg
+                            class="mobile-menu-catalog__icon"
+                            height="6"
+                            width="11"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use xlink:href="#menu-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="mobile-menu-catalog__subcategory-list-wrap">
+                        <ul class="mobile-menu-catalog__subcategory-list">
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Бензо&shy;пилы</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Электро&shy;пилы</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Акк. пилы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <div class="mobile-menu-catalog__item-header">
+                        <a href="#" class="mobile-menu-catalog__link">Мотокосы</a>
+                        <button class="mobile-menu-catalog__turn">
+                          <svg
+                            class="mobile-menu-catalog__icon"
+                            height="6"
+                            width="11"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use xlink:href="#menu-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="mobile-menu-catalog__subcategory-list-wrap">
+                        <ul class="mobile-menu-catalog__subcategory-list">
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Бензо&shy;косы</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Электро&shy;косы</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Акк. косы</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Мотоножницы</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <div class="mobile-menu-catalog__item-header">
+                        <a href="#" class="mobile-menu-catalog__link">Газонокосилки</a>
+                        <button class="mobile-menu-catalog__turn">
+                          <svg
+                            class="mobile-menu-catalog__icon"
+                            height="6"
+                            width="11"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use xlink:href="#menu-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="mobile-menu-catalog__subcategory-list-wrap">
+                        <ul class="mobile-menu-catalog__subcategory-list">
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Бензо&shy;газонокосилки</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Электро&shy;газонокосилки</a>
+                          </li>
+                          <li class="mobile-menu-catalog__subcategory">
+                            <a href="#" class="mobile-menu-catalog__link">Акк. газонокосилки</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Генераторы</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Культиваторы</a>
+                    </li>
+                  </ul>
+                  <ul class="mobile-menu-catalog__list">
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Мотоблоки</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Снегоуборщики</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Мотопомпы</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Акк. техника</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Воздуходувки</a>
+                    </li>
+                    <li class="mobile-menu-catalog__category">
+                      <a href="#" class="mobile-menu-catalog__link">Деревообрабатывающее оборудование</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Акции</a></li>
+            <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Где купить</a></li>
+            <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Новости и статьи</a></li>
+            <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Гарантия и сервис</a></li>
+            <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Контакты</a></li>
+          </ul>
+          <a href="tel:88009568754" class="contact-link">
+            <svg class="contact-link__icon" height="19" width="19" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="#phone"></use>
+            </svg>
+            <span class="contact-link__label">Телефон отдела продаж:</span>
+            <span class="contact-link__text">8 800 956 87 54</span>
+          </a>
+        </div>
+      </div>
+      <div class="container header__container">
+        <nav class="header__menu header__left">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Каталог</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Акции</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Где купить</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Новости и статьи</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__center">
+          <svg class="logo header__logo" height="17" width="200" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#logo"></use>
+          </svg>
+          <button class="header__mobile-menu-btn mobile-menu-btn">
+            <svg class="mobile-menu-btn__icon" viewBox="0 0 100 100" width="56" height="32px">
+              <path
+                class="mobile-menu-btn__line _top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+              />
+              <path class="mobile-menu-btn__line _middle" d="m 30,50 h 40" />
+              <path
+                class="mobile-menu-btn__line _bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="header__right">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Гарантия и сервис</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <form class="header__search search" action="#" method="post" name="header-search">
+            <input class="search__input" type="search" placeholder="Поиск" />
+            <button class="search__submit" type="submit">
+              <svg class="search__icon" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- /.header -->
+
+    <main class="main">
+      <section class="warranty-service">
+        <div class="container warranty-service__container">
+          <div class="bread-crumbs">
+            <a href="main.html" class="bread-crumbs__link">Главная</a>
+            <a href="#" class="bread-crumbs__link">Гарантия и сервис</a>
+          </div>
+        </div>
+        <ul class="warranty-service__list">
+          <li class="warranty-service__item _main">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-01.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h1 class="title warranty-service__title">Гарантия и сервис</h1>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    На всю продукцию компании Villartec предоставляется гарантия сроком до 24 месяцев
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-02.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Оригинальные запчасти</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    В нашем авторизованном Сервисном центре Villartec вы всегда можете приобрести или заказать
+                    оригинальные запасные части по выгодным ценам.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-03.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Техническое обслуживание</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    Мы поможем Вам провести техническое обслуживание и&nbsp;ремонт оборудования, включая бензопилы,
+                    мотокосы, газонокосилки, культиваторы, воздуходувки и многое другое.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-04.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Ремонт техники</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    Мы гарантируем высокое качество работ, использование только оригинальных запчастей, добросовестное
+                    и&nbsp;бережное отношение к&nbsp;вашему оборудованию и оптимальные сроки технического обслуживания и
+                    ремонта.
+                  </p>
+                  <p class="warranty-service__text">
+                    В Сервисном центре установлен полный комплекс современного оборудования, а также имеется весь спектр
+                    необходимых специнструментов, которые помогут выполнить качественную диагностику и ремонт техники.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-05.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Точная диагностика оборудования</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    Качество и правильное выполнение ремонтных работ зависят от профессионально проведенной диагностики.
+                    После того, как вы передадите свое оборудование в Сервисный центр, наши опытные мастера в
+                    обязательном порядке осуществляют проверку и выявляют все возможные неисправности инструмента.
+                  </p>
+                  <p class="warranty-service__text">
+                    Правильно выполненная диагностика определяет правильные методы ремонта, выбор нужного комплекта
+                    заменяемых деталей и точную стоимость всех работ. Проведенная мастерами Сервисного центра проверка
+                    поможет владельцу сэкономить на ненужных расходах и получить ясное представление о состоянии
+                    оборудования.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-06.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Сроки и условия работ</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    Сроки и стоимость ремонтных работ определяются по результату диагностики и согласовываются с
+                    заказчиком.
+                  </p>
+                  <p class="warranty-service__text">
+                    Срочный несложный ремонт или техническое обслуживание мы можем выполнить даже в присутствии
+                    заказчика. Стандартный срок ремонта при наличии необходимых запчастей составляет от 5 до 7 дней. При
+                    сложном ремонте или отсутствии запчастей - процедура ремонта может продлиться до 2 месяцев.
+                  </p>
+                  <p class="warranty-service__text">
+                    После проведения ремонта вы получаете гарантию нашего Сервисного центра на все выполненные работы и
+                    замененные запасные части.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="warranty-service__item">
+            <div class="warranty-service__img-wrap">
+              <img src="./img/warranty-service/item-07.png" alt="" class="warranty-service__img" />
+            </div>
+            <div class="container warranty-service__container">
+              <div class="warranty-service__content">
+                <h2 class="warranty-service__item-title">Где обслужить технику по гарантии?</h2>
+                <div class="warranty-service__text-block">
+                  <p class="warranty-service__text">
+                    Обслужить технику можно в любом из авторизированных центров Villartec. Найти ближайший вы можете в
+                    разделе “Где купить”
+                  </p>
+                </div>
+                <a href="#" class="warranty-service__link link-arrow">
+                  <span>Найти ближайший сервисный центр</span>
+                  <svg class="warranty-service__arrow-icon" height="8" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#link-arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- /.warranty-service -->
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__contacts contacts">
+            <svg class="logo footer__logo" height="17" width="200" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="#logo"></use>
+            </svg>
+            <address class="contacts__links">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a href="tel:88009568754" class="contact-link">
+                    <svg class="contact-link__icon" height="19" width="19" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#phone"></use>
+                    </svg>
+                    <span class="contact-link__label">Телефон отдела продаж:</span>
+                    <span class="contact-link__text">8 800 956 87 54</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a href="tel:88002865412" class="contact-link">
+                    <svg class="contact-link__icon" height="19" width="19" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#phone"></use>
+                    </svg>
+                    <span class="contact-link__label">Телефон отдела снабжения:</span>
+                    <span class="contact-link__text">8 800 286 54 12</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a href="mailto:mail@villartec.ru" class="contact-link">
+                    <svg class="contact-link__icon" height="19" width="19" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#email"></use>
+                    </svg>
+                    <span class="contact-link__label">E-mail для обращений:</span>
+                    <span class="contact-link__text">mail@villartec.ru</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+            <nav class="footer__social">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg class="social__icon" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__catalog">
+            <a href="#" class="footer__nav-link">Каталог</a>
+            <div class="footer-catalog">
+              <ul class="footer-catalog__list">
+                <li class="footer-catalog__category">
+                  <div class="footer-catalog__item-header">
+                    <a href="#" class="footer-catalog__link">Мотопилы</a>
+                    <button class="footer-catalog__turn" type="button">
+                      <svg class="footer-catalog__icon" height="6" width="11" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#menu-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="footer-catalog__subcategory-list-wrap">
+                    <ul class="footer-catalog__subcategory-list">
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Бензо&shy;пилы</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Электро&shy;пилы</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Акк. пилы</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="footer-catalog__category">
+                  <div class="footer-catalog__item-header">
+                    <a href="#" class="footer-catalog__link">Мотокосы</a>
+                    <button class="footer-catalog__turn">
+                      <svg class="footer-catalog__icon" height="6" width="11" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#menu-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="footer-catalog__subcategory-list-wrap">
+                    <ul class="footer-catalog__subcategory-list">
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Бензо&shy;косы</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Электро&shy;косы</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Акк. косы</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Мотоножницы</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <div class="footer-catalog__item-header">
+                    <a href="#" class="footer-catalog__link">Газонокосилки</a>
+                    <button class="footer-catalog__turn">
+                      <svg class="footer-catalog__icon" height="6" width="11" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#menu-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="footer-catalog__subcategory-list-wrap">
+                    <ul class="footer-catalog__subcategory-list">
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Бензо&shy;газонокосилки</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Электро&shy;газонокосилки</a>
+                      </li>
+                      <li class="footer-catalog__subcategory">
+                        <a href="#" class="footer-catalog__link">Акк. газонокосилки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Генераторы</a>
+                </li>
+              </ul>
+              <ul class="footer-catalog__list">
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Культиваторы</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Мотоблоки</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Снегоуборщики</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Мотопомпы</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Акк. техника</a>
+                </li>
+              </ul>
+              <ul class="footer-catalog__list">
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Воздуходувки</a>
+                </li>
+                <li class="footer-catalog__category">
+                  <a href="#" class="footer-catalog__link">Дерево&shy;обрабатывающее оборудование</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="footer__nav">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Акции</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Где купить</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Новости и статьи</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Гарантия и сервис</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-text"><a href="#" class="footer__bottom-link">Политика конфидециальности</a></p>
+          <p class="footer__bottom-text">© ООО “Villartec”, 2023</p>
+          <p class="footer__bottom-text">
+            <span>Разработка и продвижение сайта - </span>
+            <a href="#" class="footer__bottom-link">WTStudio</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
+
+    <div class="mobile-menu-overlay"></div>
+    <div class="popup-overlay"></div>
+
+    <svg width="0" height="0" class="hidden">
+      <!-- 1 -->
+      <symbol id="popup-icon" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="51" cy="51" r="46" stroke="currentColor" stroke-width="10" />
+        <path
+          d="M36 53L48 64L67.5 42.5"
+          stroke="currentColor"
+          stroke-width="7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <!-- 2 -->
+      <symbol id="checked" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 2.33333L3.4 5L7 1" stroke="currentColor" />
+      </symbol>
+      <!-- 3 -->
+      <symbol id="logo" viewBox="0 0 200 17" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M187.93 1.90191C183.076 2.62216 179.671 5.1536 178.564 8.86425C177.492 12.4575 178.85 15.0622 182.533 16.4802C184.435 17.2125 190.249 17.1606 192.656 16.3904C195.052 15.6233 197.503 13.9988 198.481 12.5289C199.928 10.3558 199.999 10.4307 196.474 10.4307C194.023 10.4307 193.328 10.5118 193.215 10.811C192.901 11.6439 190.687 12.641 188.855 12.7744C185.571 13.0138 184.184 12.0469 184.443 9.70004C184.861 5.92735 191.486 4.38682 193.548 7.58288L194.189 8.57513L197.094 8.49998L200 8.42482L199.985 7.17876C199.938 3.25388 194.591 0.913669 187.93 1.90191ZM42.5381 1.94524C42.5381 1.98535 43.1291 5.32237 43.8514 9.36091C44.5737 13.3995 45.1646 16.7365 45.1646 16.7766C45.1646 16.8167 47.1624 16.8496 49.6043 16.8496H54.044L58.6002 9.71876C61.1062 5.79656 63.2511 2.42665 63.3666 2.23007C63.5374 1.93882 62.9642 1.87222 60.293 1.87222H57.0093L53.9402 7.08756C52.2524 9.95599 50.7857 12.3029 50.6814 12.3029C50.5769 12.3029 50.2331 10.2868 49.9174 7.82305C49.6014 5.35901 49.2799 3.01211 49.203 2.60772L49.0627 1.87222H45.8005C44.0061 1.87222 42.5381 1.90512 42.5381 1.94524ZM62.9884 9.29405L61.2875 16.7159L64.1609 16.7918C65.7416 16.8335 67.0719 16.8301 67.1173 16.7838C67.1625 16.7375 67.9171 13.5741 68.7941 9.75407C69.6709 5.93376 70.4536 2.59782 70.5329 2.34026C70.6648 1.91314 70.415 1.87222 67.6836 1.87222H64.6894L62.9884 9.29405ZM72.6567 2.07281C72.5002 2.33946 69.3289 16.1224 69.3289 16.5361C69.3289 16.7811 70.9776 16.8413 76.2065 16.7873L83.0841 16.7159L83.3851 15.5123C83.5506 14.8504 83.7673 13.978 83.8669 13.5733L84.0476 12.8378H80.1027C77.1206 12.8378 76.1587 12.7562 76.1608 12.5035C76.1624 12.3197 76.6347 10.1232 77.2101 7.62246C77.7859 5.12178 78.3188 2.8051 78.3944 2.47399C78.5305 1.87811 78.504 1.87222 75.6531 1.87222C74.0698 1.87222 72.7214 1.96262 72.6567 2.07281ZM87.8779 2.34026C87.8035 2.59782 87.0789 5.75698 86.2675 9.36091C85.4559 12.9648 84.7323 16.1243 84.6595 16.3816C84.5361 16.8188 84.9831 16.8496 91.4736 16.8496H98.4198L98.8455 15.1229C99.0798 14.1735 99.2716 13.2708 99.2716 13.117C99.2716 12.9354 97.8934 12.8378 95.3268 12.8378H91.3819L91.5188 12.236C91.5942 11.9052 92.1281 9.60911 92.7057 7.13356C93.2833 4.65828 93.7558 2.46196 93.7558 2.25254C93.7558 1.94684 93.1922 1.87222 90.8842 1.87222C88.3761 1.87222 87.9958 1.93133 87.8779 2.34026ZM107.841 2.47399C107.636 2.8051 106.175 5.18195 104.594 7.75619C103.013 10.3304 101.109 13.4294 100.362 14.6431L99.0052 16.8496H102.231H105.456L105.951 15.9135L106.446 14.9774H109.819H113.192V15.9135V16.8496H116.48C119.756 16.8496 119.768 16.8472 119.632 16.2478C119.497 15.6546 117.395 2.2726 117.395 2.00835C117.395 1.93347 115.329 1.87222 112.804 1.87222C108.329 1.87222 108.204 1.88747 107.841 2.47399ZM124.224 1.96396C124.224 2.11453 121.064 15.8745 120.913 16.3816C120.786 16.8081 121.038 16.8496 123.762 16.8496H126.75L127.266 14.6431C127.978 11.603 128.286 11.5952 130.814 14.554L132.76 16.8311L136.437 16.8279L140.114 16.825L137.893 14.6808C136.143 12.9913 135.753 12.4845 136.054 12.2903C136.265 12.1547 136.674 12.0392 136.963 12.0336C138.848 11.998 141.353 9.76236 141.984 7.55239C142.483 5.80646 142.307 4.58981 141.397 3.48924C140.231 2.07736 138.929 1.87222 131.136 1.87222C127.334 1.87222 124.224 1.91341 124.224 1.96396ZM143.683 3.41008C143.506 4.25576 143.301 5.15842 143.23 5.41598C143.112 5.84069 143.357 5.88402 145.875 5.88402C148.031 5.88402 148.651 5.96479 148.651 6.24508C148.651 6.58822 146.688 15.3936 146.392 16.3816C146.264 16.8084 146.516 16.8496 149.245 16.8496H152.238L152.548 15.4455C152.718 14.6731 153.282 12.2061 153.8 9.96268L154.742 5.88402H157.574H160.406L160.832 4.15734C161.066 3.20788 161.258 2.30523 161.258 2.15144C161.258 1.96316 158.453 1.87222 152.632 1.87222H144.006L143.683 3.41008ZM162.472 2.34026C162.398 2.59782 161.672 5.75698 160.859 9.36091C160.045 12.9648 159.322 16.1243 159.251 16.3816C159.13 16.8202 159.634 16.8496 167.25 16.8496H175.378L175.803 15.1229C176.038 14.1735 176.229 13.2708 176.229 13.117C176.229 12.9325 174.484 12.8378 171.08 12.8378C166.492 12.8378 165.947 12.7915 166.089 12.4147C166.177 12.182 166.249 11.8209 166.249 11.6123C166.249 11.2975 167.14 11.2331 171.484 11.2331H176.719L177.083 9.5615L177.448 7.88992L172.374 7.81744C167.591 7.74897 167.299 7.7158 167.299 7.2376C167.299 5.87466 167.261 5.88402 172.791 5.88402H177.963L178.291 4.26753C178.471 3.37852 178.685 2.47586 178.765 2.26163C178.892 1.92598 177.789 1.87222 170.759 1.87222C163.222 1.87222 162.597 1.90753 162.472 2.34026ZM128.983 7.07231C128.46 9.18813 128.331 9.09346 131.721 9.09346C134.591 9.09346 134.789 9.05815 135.398 8.43686C136.14 7.68237 136.224 6.90836 135.631 6.30419C135.304 5.97174 134.598 5.88402 132.247 5.88402H129.276L128.983 7.07231ZM110.172 8.49356C109.449 9.77947 108.826 10.9523 108.785 11.0994C108.74 11.2662 109.466 11.3334 110.715 11.278L112.717 11.189L112.571 10.3419C112.491 9.87576 112.346 8.74256 112.25 7.82305C112.15 6.87145 111.947 6.15227 111.779 6.15334C111.617 6.15415 110.894 7.20738 110.172 8.49356Z"
+          fill="currentColor"
+        />
+        <path
+          d="M4.66582 8.5585C2.10599 4.07197 0.00632312 0.307571 1.93988e-05 0.193369C-0.00654698 0.0788987 1.65475 0.0187217 3.6919 0.059642L7.3956 0.133727L10.4553 5.48279L13.5149 10.8319L17.403 10.9656L21.2908 11.0993L19.2813 13.9814L17.2717 16.8632L13.2956 16.7896L9.31981 16.7158L4.66582 8.5585Z"
+          fill="#FF5800"
+        />
+        <path
+          d="M16.3214 6.01769L18.4074 3.00885L20.4937 0L24.3586 0.0040118L28.2236 0.00829105L30.7551 4.48385C32.1472 6.94549 34.2983 10.735 35.5351 12.9046L37.784 16.8495H34.0141H30.2442L27.2507 11.5673L24.2575 6.28515L20.2893 6.15142L16.3214 6.01769Z"
+          fill="#FF5800"
+        />
+      </symbol>
+      <!-- 4 -->
+      <symbol id="link-arrow" viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 5H16M16 5L12.1897 1M16 5L12.1897 9" stroke="currentColor" />
+      </symbol>
+      <!-- 5 -->
+      <symbol id="vk" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.8288 18.9663H14.7849C14.7849 18.9663 15.0739 18.9383 15.2209 18.7989C15.3569 18.671 15.3519 18.4308 15.3519 18.4308C15.3519 18.4308 15.3329 17.3064 15.929 17.1408C16.516 16.9778 17.2701 18.2275 18.0691 18.7086C18.6732 19.0723 19.1322 18.9926 19.1322 18.9926L21.2693 18.9663C21.2693 18.9663 22.3874 18.9058 21.8574 18.1355C21.8144 18.0724 21.5484 17.5659 20.2683 16.5247C18.9282 15.4345 19.1082 15.6115 20.7223 13.7265C21.7054 12.5784 22.0984 11.8773 21.9754 11.5776C21.8584 11.2919 21.1353 11.3673 21.1353 11.3673L18.7312 11.3795C18.7312 11.3795 18.5531 11.3585 18.4201 11.4277C18.2911 11.4961 18.2081 11.6538 18.2081 11.6538C18.2081 11.6538 17.8271 12.5425 17.3191 13.2979C16.248 14.892 15.8189 14.9762 15.6439 14.8771C15.2369 14.6467 15.3389 13.9499 15.3389 13.4557C15.3389 11.9106 15.6059 11.2665 14.8179 11.1C14.5559 11.0448 14.3638 11.008 13.6948 11.0018C12.8367 10.9939 12.1097 11.0045 11.6986 11.1806C11.4246 11.298 11.2136 11.5601 11.3426 11.575C11.5016 11.5934 11.8617 11.66 12.0527 11.8878C12.2997 12.1814 12.2907 12.8422 12.2907 12.8422C12.2907 12.8422 12.4327 14.6607 11.9597 14.8868C11.6346 15.0419 11.1896 14.7255 10.2345 13.2786C9.7455 12.5381 9.37547 11.7187 9.37547 11.7187C9.37547 11.7187 9.30447 11.5662 9.17746 11.4847C9.02345 11.3857 8.80743 11.3541 8.80743 11.3541L6.52126 11.3664C6.52126 11.3664 6.17824 11.3752 6.05223 11.5057C5.94022 11.6223 6.04323 11.8624 6.04323 11.8624C6.04323 11.8624 7.83336 15.5318 9.85951 17.3818C11.7186 19.0776 13.8288 18.9663 13.8288 18.9663Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 6 -->
+      <symbol id="telegram" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.8859 16.9088L12.6377 20.2592C12.9928 20.2592 13.1465 20.1128 13.3309 19.937L14.9953 18.41L18.4441 20.8346C19.0767 21.173 19.5223 20.9948 19.6929 20.276L21.9567 10.0928L21.9573 10.0922C22.158 9.19464 21.6192 8.84364 21.0029 9.06384L7.69638 13.9544C6.78823 14.2928 6.80198 14.7788 7.542 14.999L10.944 16.0148L18.846 11.2682C19.2179 11.0318 19.556 11.1626 19.2779 11.399L12.8859 16.9088Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 8 -->
+      <symbol id="youtube" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.9963 13.5243C23.0323 12.599 22.8047 11.6806 22.3349 10.8544C22.0161 10.5154 21.5737 10.2866 21.0848 10.208C19.0625 10.0447 17.0317 9.97784 15.0014 10.0076C12.9784 9.9765 10.955 10.0412 8.93973 10.2015C8.54131 10.266 8.17259 10.4322 7.87858 10.6799C7.22445 11.2164 7.15177 12.1344 7.07909 12.9102C6.97364 14.305 6.97364 15.7045 7.07909 17.0993C7.10012 17.5359 7.17321 17.9693 7.29713 18.3922C7.38477 18.7187 7.56207 19.0208 7.81317 19.2714C8.10918 19.5322 8.48648 19.7079 8.89612 19.7756C10.4631 19.9477 12.0419 20.0189 13.6204 19.9889C16.1643 20.0213 18.3956 19.9889 21.0339 19.8079C21.4536 19.7444 21.8415 19.5685 22.1459 19.3037C22.3494 19.1226 22.5014 18.901 22.5893 18.6572C22.8492 17.9478 22.9769 17.2053 22.9672 16.4593C22.9963 16.0972 22.9963 13.9122 22.9963 13.5243ZM13.3588 16.8471V12.8455L17.6615 14.856C16.455 15.4508 14.8633 16.1231 13.3588 16.8471Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 9 -->
+      <symbol id="phone" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.7027 11.6247L12.3327 12.3965C12.1683 12.4891 11.9781 12.5253 11.7912 12.4996C11.6043 12.4739 11.4309 12.3878 11.2976 12.2543L6.72512 7.68189C6.59176 7.54847 6.50569 7.3751 6.48003 7.18821C6.45436 7.00132 6.4905 6.81116 6.58295 6.64672L7.35474 5.27676C7.49367 5.03019 7.54806 4.74493 7.50961 4.46454C7.47116 4.18415 7.34198 3.92406 7.14181 3.724L5.0885 1.67069C4.96815 1.55028 4.82526 1.45477 4.66799 1.3896C4.51072 1.32443 4.34215 1.29089 4.17191 1.29089C4.00168 1.29089 3.83311 1.32443 3.67583 1.3896C3.51856 1.45477 3.37567 1.55028 3.25533 1.67069L2.32302 2.60234C1.77783 3.14752 1.43056 3.85931 1.33642 4.62455C1.24228 5.38978 1.40667 6.16452 1.80346 6.82558L2.27126 7.60524C4.66017 11.5867 8.03205 14.8875 12.0635 17.1911L12.1558 17.2441C13.533 18.031 15.2345 17.8017 16.3372 16.6997L17.3107 15.7261C17.4311 15.6058 17.5267 15.4629 17.5918 15.3056C17.657 15.1483 17.6905 14.9798 17.6905 14.8095C17.6905 14.6393 17.657 14.4707 17.5918 14.3134C17.5267 14.1562 17.4311 14.0133 17.3107 13.8929L15.2561 11.8383C15.0561 11.6379 14.7959 11.5085 14.5154 11.4699C14.2349 11.4313 13.9494 11.4857 13.7027 11.6247Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 10 -->
+      <symbol id="email" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 2.75503V12.392L4.81848 7.5735L0 2.75503ZM0.957439 1.78943L7.05771 7.8897C7.82815 8.66014 9.17183 8.66014 9.94227 7.8897L16.0425 1.78943H0.957439Z"
+          fill="currentColor"
+        />
+        <path
+          d="M10.904 8.85095C10.2628 9.49287 9.40869 9.84715 8.50021 9.84715C7.59173 9.84715 6.73765 9.49287 6.09642 8.85095L5.78022 8.53475L0.96582 13.3491H16.0346L11.2202 8.53475L10.904 8.85095ZM12.1817 7.57324L17.0002 12.3917V2.75476L12.1817 7.57324Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 11 -->
+      <symbol id="search" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M11.8598 11.1533L8.87771 8.17129C9.69035 7.1774 10.0899 5.90919 9.99372 4.62898C9.89753 3.34877 9.31296 2.1545 8.36093 1.2932C7.4089 0.431905 6.16224 -0.0305245 4.87882 0.00156501C3.5954 0.0336546 2.37341 0.557808 1.46561 1.46561C0.557808 2.37341 0.0336546 3.5954 0.00156501 4.87882C-0.0305245 6.16224 0.431905 7.4089 1.2932 8.36093C2.1545 9.31296 3.34877 9.89753 4.62898 9.99372C5.90919 10.0899 7.1774 9.69035 8.17129 8.87771L11.1533 11.8598C11.2476 11.9508 11.3738 12.0011 11.5048 12C11.6357 11.9988 11.761 11.9463 11.8537 11.8537C11.9463 11.761 11.9988 11.6357 12 11.5048C12.0011 11.3738 11.9508 11.2476 11.8598 11.1533ZM5.01189 9.0086C4.22141 9.0086 3.44869 8.7742 2.79143 8.33503C2.13417 7.89587 1.6219 7.27167 1.3194 6.54136C1.0169 5.81106 0.937752 5.00745 1.09197 4.23217C1.24618 3.45688 1.62683 2.74473 2.18578 2.18578C2.74473 1.62683 3.45688 1.24618 4.23217 1.09197C5.00745 0.937752 5.81106 1.0169 6.54136 1.3194C7.27167 1.6219 7.89587 2.13417 8.33503 2.79143C8.7742 3.44869 9.0086 4.22141 9.0086 5.01189C9.00741 6.07152 8.58595 7.0874 7.83668 7.83668C7.0874 8.58595 6.07152 9.00741 5.01189 9.0086Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- 12 -->
+      <symbol id="list-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" />
+      </symbol>
+      <!-- 13 -->
+      <symbol id="menu-arrow" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 5L5.5 1L1 5" stroke="currentColor" />
+      </symbol>
+      <!-- 14 -->
+      <symbol id="swiper-arrow" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 1L1 5L5 9" stroke="currentColor" />
+      </symbol>
+      <!-- 15 -->
+      <symbol id="close-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="2" />
+      </symbol>
+    </svg>
+  </body>
+</html>

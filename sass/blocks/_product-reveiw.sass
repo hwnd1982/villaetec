@@ -1,0 +1,91 @@
+.product-reveiw
+  padding: 63px 0 61px
+  background-color: #F9F9F9
+  &__container
+    width: 100%
+    display: grid
+    justify-items: center
+    // grid-template-columns: 418px 1fr
+    // gap: 30px
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-bottom: 35px
+    // max-width: 400px
+  &__title
+    text-align: center
+    margin-bottom: 21px
+    max-width: 65%
+  &__description
+    text-align: center
+  &__frame
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    max-width: 100%
+    max-height: 100%
+    &-wrap
+      position: relative
+      width: 100%
+      padding-bottom: 56.85%
+      border-radius: 10px
+      overflow: hidden
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        opacity: 0
+        background-image: url(../img/icons/preloader.svg)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 50%
+        background-color: #D9D9D9
+        z-index: -10
+        opacity: 0
+        transition-delay: 0s, .4s
+        transition-property: all, z-index
+        transition-duration: .4s, 0s
+      &._loading
+        &::after
+          opacity: 1
+          z-index: 5
+
+@media screen and ( min-width: 769px )
+  .product-reveiw
+    padding: 100px 0 37px
+    &__title
+      max-width: none
+
+@media screen and ( min-width: 992px )
+  .product-reveiw
+    &__content
+      align-items: flex-start
+      max-width: 400px
+      margin-bottom: 0
+    &__title
+      margin-bottom: 26px
+      text-align: left
+    &__description
+      text-align: left
+    &__container
+      display: grid
+      grid-template-columns: 418px 1fr
+      gap: 30px
+    &__frame
+      &-wrap
+        padding-bottom: 70%
+
+@media screen and ( min-width: 1200px )
+  .product-reveiw
+    &__container
+      grid-template-columns: 518px 1fr
+    &__frame
+      &-wrap
+        padding-bottom: 56.68%

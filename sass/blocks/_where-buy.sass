@@ -1,0 +1,76 @@
+.where-buy
+  background-color: #FAFAFA
+  padding-bottom: 60px
+  &__container
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    text-align: center
+    margin-bottom: 18px
+    margin-bottom: 24px
+    max-width: 80%
+  &__subtitle
+    max-width: 710px
+    margin-bottom: 31px
+    text-align: center
+  &__map
+    display: none
+  &__popup
+    position: absolute
+    padding: 12px 14px 13px
+    min-width: 200px
+    top: 0
+    left: 0
+    background-color: #fff
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15)
+    opacity: 0
+    z-index: -1
+    transition-property: z-index, opacity
+    transition-duration: 0s, .4s
+    transition-delay: .4s, 0s
+    overflow: hidden
+    &._show
+      transition-delay: 0s, 0s
+      opacity: 1
+      z-index: 10
+  &__link-map
+    display: block
+  &__region
+    &-name
+      display: block
+      line-height: 120%
+      margin-bottom: 2px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      color: $text
+    &-store
+      display: block
+      font-size: 10px
+      color: #9D9D9D
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+  &__region-search
+    max-width: 690px
+
+  // 
+  &__region-dealers
+    padding-top: 40px
+    max-width: 850px
+    width: 100%
+
+@media screen and ( min-width: 992px )
+  .where-buy
+    padding-bottom: 99px
+    &__title
+      margin-bottom: 18px
+    &__subtitle
+      margin-bottom: 34px
+    &__map
+      position: relative
+      display: block
+      & svg
+        max-width: 100%

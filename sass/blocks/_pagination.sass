@@ -1,0 +1,32 @@
+.pagination
+  display: flex
+  justify-content: center
+  &__link, &__divider
+    width: 26px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    +nor7
+    font-size: 14px
+    line-height: 110%
+    text-align: center
+    color: #BFBFBF
+    border-radius: 5px
+  &__link
+    transition: .4s
+    &._active
+      color: #fff
+      background: #FF5800
+      pointer-events: none
+    &:hover
+      color: $prime
+    &._start, &._end
+      color: $prime
+      padding-right: 10px
+      &:hover
+        stroke-width: 2px
+    &._end
+      transform: rotate(180deg)
+  &__page
+    padding: 0 2.5px

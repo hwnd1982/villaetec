@@ -1,0 +1,207 @@
+.news-item, .news-video
+  position: relative
+  outline: 1px solid #F0F0F0
+  outline-offset: -1px
+  border-radius: 5px
+  background-color: #fff
+  overflow: hidden
+  &__content
+    display: grid
+    grid-template-rows: min-content min-content 1fr
+    padding: 16px 20px
+    flex-grow: 1
+  &__info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 10px
+  &__label
+    display: block
+    border: 1px solid #F0F0F0
+    border-radius: 2px
+    padding: 0px 11px 1px
+    font-size: 11px
+    color: #9D9D9D
+  &__data
+    font-size: 10px
+    color: #9D9D9D
+  &__title
+    +nor7
+    font-size: 14px
+    line-height: 130%
+    +text-line-overflow(3)
+    max-width: 95%
+    min-height: 55.4px
+    margin-bottom: 15px
+  &__link
+    display: flex
+    align-self: end
+    align-items: center
+    justify-content: flex-start
+    flex-grow: 1
+    font-size: 14px
+    color: $prime
+    &>:first-child
+      margin-right: 9px
+  &__link
+    &:hover
+      color: $prime
+
+.news-item
+  &__img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    object-fit: cover
+    min-width: 100%
+    min-height: 100%
+    &-wrap
+      position: relative
+      width: 100%
+      padding-bottom: 100%
+
+.news-video
+  &__frame
+    position: absolute
+    height: auto
+    width: auto
+    top: 0
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    object-fit: cover
+    min-width: 100%
+    min-height: 100%
+    &-wrap
+      position: relative
+      width: 100%
+      padding-bottom: 100%
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        opacity: 0
+        background-image: url(../img/icons/preloader.svg)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 50%
+        background-color: #D9D9D9
+        z-index: -10
+        opacity: 0
+        transition-delay: 0s, .4s
+        transition-property: all, z-index
+        transition-duration: .4s, 0s
+      &._loading
+        &::after
+          opacity: 1
+          z-index: 5
+
+@media screen and ( min-width: 576px )
+  .news-item, .news-video
+    &__title
+      font-size: 16px
+      max-width: 85%
+      min-height: 62.4px
+      margin-bottom: 8px
+    &__info
+      margin-bottom: 8px
+    &__link
+      &>:first-child
+        margin-right: 20px
+
+  .news-video
+    outline: none
+    background-color: #D9D9D9
+    &__frame
+      width: 100%
+      height: 400px
+      &-wrap
+        position: relative
+        padding-bottom: calc(500% / 7)
+        z-index: 1
+    &__content
+      position: absolute
+      padding: 16px 20px 17px
+      bottom: 0
+      left: 0
+      right: 0
+      background: rgba(0, 0, 0, 0.1)
+      backdrop-filter: blur(10px)
+      border-radius: 0px 0px 5px 5px
+      transition-duration: .4s, .4s
+      transition-delay: .4s, 0s
+      transition-property: opacity, transform
+      z-index: 5
+      &._hidden
+        opacity: 0
+        transition-duration: .4s, .8s
+        transition-delay: 0s, 0s
+        transform: translateY(100%)
+    &__label
+      border: 1px solid #A8A8A8
+      color: #B1B1B1
+    &__data
+      color: #fff
+    &__title
+      color: #fff
+      max-width: 75%
+    &__link
+      font-size: 14px
+      color: #fff
+      transition: .4s
+      &:hover
+        color: #fff
+      &>:first-child
+        margin-right: 16px
+
+@media screen and ( min-width: 992px )
+  .news-item, .news-video
+    &__link
+      transition: .4s
+      &::after
+        position: absolute
+        content: ''
+        bottom: 0
+        top: 0
+        left: 0
+        right: 0
+    .news-item
+      &__link
+        &:hover
+          text-shadow: 0 0 .7px $prime, 0 0 .7px $prime
+    .news-video
+      &__link
+        &:hover
+          text-shadow: 0 0 .7px #fff, 0 0 .7px #fff
+
+  .news-video
+    &__title
+      font-size: 20px
+    &__frame
+      height: 450px
+
+@media screen and ( min-width: 922px )
+  .news-video
+    ._swiper &
+      &__frame
+        &-wrap
+          padding-bottom: calc( 441.5 / 605 * 100%)
+
+@media screen and ( min-width: 1200px )
+  .news-video
+    ._swiper &
+      &__frame
+        &-wrap
+          padding-bottom: calc(201 / 269 * 100%)
+
+@media screen and ( min-width: 1400px )
+  .news-video
+    ._swiper &
+      &__frame
+        &-wrap
+          padding-bottom: calc(500% / 7)

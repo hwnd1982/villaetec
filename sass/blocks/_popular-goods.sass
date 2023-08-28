@@ -1,0 +1,115 @@
+.popular-goods
+  background-color: #F9F9F9
+  padding: 60px 0 64px
+  &__container
+  &__content
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: 'header' 'swiper' 'controls' 'link'
+    grid-auto-rows: auto
+    max-width: 520px
+    margin: 0 auto
+  &__header
+    grid-area: header
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-bottom: 35px
+    &-title
+      max-width: 75%
+      margin-bottom: 16px
+  &__description
+    max-width: 85%
+  &__link
+    grid-area: link
+    max-width: 300px
+    justify-self: center
+    padding: 22px 20px 19px
+  &__swiper
+    grid-area: swiper
+    margin: 0
+    &-controls
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 30px 0 40px
+  &__item
+    max-width: 100%
+  &__arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 4px
+    width: 30px
+    height: 30px
+    border: 1px solid $prime
+    border-radius: 3px
+    background-color: $prime
+    color: #fff
+    transition: .4s
+    &._left
+      margin-right: 7.5px
+    &._right
+      margin-left: 7.5px
+      transform: rotate(180deg)
+    &:disabled
+      background-color: #F0F0F0
+      border-color: #F0F0F0
+    &-icon
+      stroke-width: 2.5px
+
+@media screen and ( min-width: 768px )
+  .popular-goods
+    padding: 100px 0
+    &-title
+      margin-bottom: 32px
+    &__header
+      padding-bottom: 70px
+    &__description
+      max-width: 450px
+
+@media screen and ( min-width: 992px )
+  .popular-goods
+    &__content
+      max-width: 790px
+      max-width: none
+      margin: 0 auto
+    &__list
+      display: grid
+      gap: 30px
+      justify-content: center
+      grid-template-columns: repeat(auto-fill, 250px)
+    &__swiper
+      overflow: visible
+      margin-bottom: 70px
+      &-controls
+        display: none
+    &__link
+      padding: 20px 20px 19px
+
+@media screen and ( min-width: 1200px )
+  .popular-goods
+    &__container
+    &__content
+      grid-template-columns: 1fr 790px
+      grid-template-areas: 'header swiper' 'link swiper'
+      grid-auto-rows: min-content 1fr
+      align-items: start
+    &__header
+      align-items: flex-start
+      text-align: left
+      max-width: 380px
+      padding-top: 52px
+      padding-bottom: 0
+      &-title
+        margin-bottom: 32px
+    &__description
+      margin-bottom: 46px
+    &__link
+      justify-self: start
+    &__list
+      grid-template-columns: repeat(auto-fill, 250px)
+      gap: 20px
+    &__swiper
+      margin-bottom: 0

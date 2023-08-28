@@ -1,0 +1,166 @@
+.warranty-service
+  background-color: #fff
+  &__container
+    position: relative
+  &__list
+    display: grid
+  &__img
+    position: absolute
+    top: 50%
+    right: 50%
+    object-fit: cover
+    object-position: center
+    min-width: 100%
+    min-height: 100%
+    transform: translate(50%, -50%)
+    &-wrap
+      position: relative
+      // position: absolute
+      // right: 0
+      // left: 0
+      // bottom: 0
+      overflow: hidden
+      padding-bottom: 180px
+      width: 100%
+  &__item
+    position: relative
+    min-height: 349px
+    display: flex
+    align-items: center
+    flex-direction: column-reverse
+    &:first-child
+      padding-top: 0
+    &-title
+      +nor7
+      font-size: 26px
+      line-height: 110%
+      margin-bottom: 27.3px
+      text-align: center
+  &__item:first-child &
+    &__content
+      padding-top: 0
+    &__img
+      &-wrap
+        padding-bottom: 270px
+  &__item:last-child &
+    &__item
+      &-title
+        max-width: 83%
+  &__item:nth-child(5) &
+    &__content
+      width: 93%
+  &__title
+    margin-bottom: 25px
+    text-align: center
+  &__text
+    text-align: center
+    &:not(:last-child)
+      margin-bottom: 16.5px
+    &-block
+      &:not(:last-child)
+        margin-bottom: 25px
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $prime
+    &>:first-child
+      margin-right: 9px
+    &:hover
+      color: $prime
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    grid-area: content
+    max-width: 500px
+    padding: 60px 0 55px
+    margin: 0 auto
+
+@media screen and ( min-width: 992px )
+  .warranty-service
+    background-color: #FAFAFA
+    &__title
+      margin-bottom: 18px
+      text-align: left
+    &__img
+      &-wrap
+        position: absolute
+        padding-bottom: 0
+        top: 0
+        bottom: 0
+        width: auto
+    &__text
+      text-align: left
+      &:not(:last-child)
+        margin-bottom: 15px
+    &__container
+      display: grid
+      height: 100%
+      align-items: center
+      grid-template-columns: 1fr 1fr
+    &__list
+      grid-auto-rows: minmax(min-content, 350px)
+    &__item
+      display: block
+      padding: 52px 0 65px
+      &:first-child
+        padding-top: 25px
+        min-width: 420px
+      &:last-child
+        padding-top: 74px
+      &-title
+        font-size: 30px
+        text-align: left
+        margin-bottom: 20px
+    &__content
+      padding: 0
+      align-items: flex-start
+    &__item:nth-child(n) &
+      &__item
+        &-title
+          max-width: none
+      &__content
+        max-width: none
+    &__item:nth-child(even) &
+      &__container
+        grid-template-areas: '.content'
+      &__content
+        padding-left: 50px
+      &__img
+        &-wrap
+          left: 0
+          right: 50%
+    &__item:nth-child(odd) &
+      &__container
+        grid-template-areas: 'content .'
+      &__content
+        padding-right: 50px
+      &__img
+        &-wrap
+          left: 50%
+          right: 0
+    &__link
+      transition: .4s
+      &:hover
+        text-shadow: 0 0 .65px currentColor, 0 0 .65px currentColor
+    &__arrow-icon
+      transition: .4s
+    &__link:hover &__arrow-icon
+      stroke-width: 2px
+
+@media screen and ( min-width: 1200px )
+  .warranty-service
+    &__content
+      max-width: 97%
+    &__list
+      grid-auto-rows: 515px 350px 350px 360px 420px 420px 350px
+    &__item:nth-child(even) &
+      &__content
+        padding-left: 95px
+    &__item:nth-child(odd) &
+      &__content
+        padding-right: 95px
+    &__item:nth-child(-n + 3) &
+      &__content
+        max-width: 87.5%

@@ -1,0 +1,79 @@
+.subscribe
+  position: relative
+  padding: 160px 0 166px
+  background-image: url(../img/subscribe/background.png)
+  background-size: 1440px 1032px
+  background-position: bottom 10% left 10%
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(10px)
+    z-index: -1
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title, &__subtitle
+    text-align: center
+    color: #fff
+  &__title
+    margin-bottom: 15px
+  &__subtitle
+    margin-bottom: 35px
+    max-width: 75%
+  &__button, &__input
+    max-width: 300px
+  &__input
+    padding-left: 18px
+    margin-bottom: 10px
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+
+  &._news-page
+    padding: 136px 0 156px
+  ._news-page &
+    &__title
+      margin-bottom: 21px
+
+@media screen and ( min-width: 576px )
+  .subscribe
+    padding: 100px 0 101px
+    &__title
+      margin-bottom: 11px
+    &__subtitle
+      margin-bottom: 32px
+      max-width: none
+    &__form
+      flex-direction: row
+      justify-content: center
+    &__input
+      margin-bottom: 0
+      margin-right: 10px
+    &._news
+      padding: 70px 0 81px
+
+@media screen and ( min-width: 992px )
+  .subscribe
+    background-size: cover
+
+    &._news-page, &._contact-page
+      padding: 70px 0 80px
+    ._news-page &, ._contact-page &
+      &__title
+        max-width: 850px
+        margin-bottom: 13px
+
+    ._news &
+      &__title
+        max-width: 60%
+        margin-bottom: 14px

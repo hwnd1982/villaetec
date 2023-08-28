@@ -1,0 +1,48 @@
+.open-office
+  &__form
+    display: grid
+    grid-template-columns: 305px
+    align-items: center
+    columns: 2
+    padding: 5px 0
+    gap: 15px
+  &__column
+    &>:not(:last-child)
+      margin-bottom: 10px
+  &__select
+    width: 100%
+  &__input
+    width: 100%
+  &__privacy
+    padding-bottom: 3px
+  &__question
+    display: flow-root
+    padding-top: 10px
+    padding-bottom: 10px
+    &-text
+      font-size: 16px
+      line-height: 19px
+      color: #9D9D9D
+      margin: 0 0 11px
+      float: left
+    &-answers
+      display: flex
+    &-answer
+      flex-basis: 80px
+
+@media screen and ( min-width: 768px )
+  .open-office
+    &__form
+      grid-template-columns: repeat(2, 305px)
+      gap: 20px 30px
+    &__question
+      padding-bottom: 0
+    &-text
+      margin: 0 0 16px
+    &__privacy
+      padding-bottom: 0
+
+@media screen and ( min-width: 1200px )
+  .open-office
+    &__form
+      grid-template-columns: repeat(2, 330px)

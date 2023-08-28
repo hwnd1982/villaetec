@@ -111,3 +111,14 @@
       &__arrow-icon
         stroke-width: 2px
         animation: link-arrow .8s
+    &._mini-desktop-hidden
+      display: none
+
+    ._category &
+      &__link
+        padding-top: 29px
+
+@media screen and ( min-width: 1200px )
+  .catalog-offer
+    &._mini-desktop-hidden
+      display: flex

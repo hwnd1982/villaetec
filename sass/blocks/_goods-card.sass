@@ -1,0 +1,259 @@
+.goods-card
+  position: relative
+  padding: 10px 10px 19px
+  z-index: 1
+  display: grid
+  grid-template-rows: repeat(3, min-content) 1fr
+  align-items: end
+  min-height: 360px
+  &__category
+    font-size: 10px
+    color: #9D9D9D
+    margin-bottom: 4px
+  &__img
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+    object-fit: contain
+    object-position: center
+    &-wrap
+      width: auto
+      position: absolute
+      bottom: 33.5%
+      right: 10px
+      left: 10px
+      padding-bottom: calc(180 / 230 * 100%)
+      z-index: -1
+  &__name
+    +nor7
+    font-size: 14px
+    line-height: 110%
+    min-height: 24px
+    max-width: 80%
+    margin-bottom: 6px
+  &__prices
+    display: flex
+    align-items: baseline
+    flex-direction: column-reverse
+    justify-content: flex-start
+    min-height: 25.19px
+  &__price
+    +nor7
+    font-size: 12px
+    line-height: 110%
+    color: $prime
+    &::before
+      content: 'От '
+    & + &
+      +nor4
+      font-size: 10px
+      text-decoration-line: line-through
+      color: #ccc
+      margin-right: 0
+      margin-bottom: 1px
+      &::before
+        content: none
+  &__feature
+    display: grid
+    grid-template-columns: 2fr 1fr
+    justify-content: space-between
+    align-items: end
+    &-list
+      display: grid
+      grid-template-columns: 1fr
+      gap: 6px
+      align-items: end
+    &-name
+      font-size: 12px
+      line-height: 140%
+      color: #9D9D9D
+    &-value
+      +nor7
+      font-size: 12px
+      line-height: 140%
+      justify-self: end
+  &__link
+    &::after, &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    &::after
+      z-index: -2
+      background-color: #fff
+      border: 1px solid var(--border-color)
+    &-text
+      display: none
+
+.goods-labels
+  position: absolute
+  top: 11px
+  right: 10px
+  display: flex
+  flex-direction: column
+  &__item
+    position: relative
+    padding: 6px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #F0F0F0
+    border-radius: 5px
+    cursor: pointer
+    &:not(:last-child)
+      margin-bottom: 5px
+    &-icon
+      width: 8px
+      height: 8px
+    &-text
+      position: absolute
+      top: -60%
+      right: 6px
+      white-space: nowrap
+      padding: 9px 10px 9px 9px
+      font-size: 10px
+      line-height: 120%
+      background-color: #fff
+      border-radius: 5px
+      opacity: 0
+      z-index: -10
+
+@media screen and ( min-width: 480px )
+  .goods-card
+    &__img
+      &-wrap
+        bottom: 23%
+
+@media screen and ( min-width: 576px )
+  .goods-card
+    &__category
+      margin-bottom: 3px
+    &__name
+      font-size: 16px
+      margin-bottom: 8px
+    &__prices
+      flex-direction: row-reverse
+      justify-content: flex-end
+      min-height: auto
+    &__price
+      font-size: 14px
+      & + &
+        margin-right: 8px
+        margin-bottom: 0
+        font-size: 14px
+    &__img
+      &-wrap
+        bottom: 28%
+
+@media screen and ( min-width: 768px )
+  .goods-card
+    min-height: 420px
+    .subcategory &
+      min-height: 360px
+    &__feature
+      max-width: 85%
+      grid-template-columns: 1fr
+      &-list
+        grid-template-columns: repeat(2, 45%)
+        grid-template-rows: 1fr 1fr
+        grid-auto-flow: column
+        align-items: end
+        gap: 12px 17px
+      &-name
+        font-size: 10px
+        margin-bottom: 3px
+      &-value
+        justify-self: start
+        font-size: 14px
+        line-height: 110%
+
+@media screen and ( min-width: 992px )
+  .goods-card
+    // min-height: 380px
+    min-height: 480px
+    margin-bottom: -60px
+    padding: 20px 21px 86px
+    transition-delay: .4s
+    .subcategory &
+      min-height: 480px
+    &__img
+      &-wrap
+        bottom: 38%
+    .subcategory &
+      &__img
+        &-wrap
+          bottom: 28%
+    &:hover
+      transition-delay: .0s
+      z-index: 2
+    &__link
+      &::after, &::before
+        bottom: 60px
+        transition-duration: .4s
+        transition-delay: .4s
+      &:hover
+        &::after, &::before
+          bottom: 0
+          transition-delay: 0s
+        &::after
+          box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15)
+          // box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+          border-color: #fff
+      &:hover + &-text
+        opacity: 1
+        transform: translateY(0)
+        transition-delay: .2s
+      &-text
+        display: block
+        position: absolute
+        width: auto
+        bottom: 18px
+        left: 20px
+        right: 20px
+        max-width: 100%
+        padding: 11px 11px 12px
+        padding: 11px 10px 10px
+        border: 1px solid currentColor
+        border-radius: 5px
+        +nor7
+        text-align: center
+        font-size: 14px
+        line-height: 17px
+        text-transform: uppercase
+        background-color: $prime
+        color: #fff
+        border-color: #fff0
+        opacity: 0
+        transform: translateY(-20px)
+        transition-duration: .4s
+        transition-delay: .2s
+        z-index: -1
+
+    &.swiper-slide
+      opacity: 0
+      transition: .4s
+    &.swiper-slide-visible
+      opacity: 1
+
+  .goods-labels
+    top: 21px
+    right: 20px
+    &__item
+      padding: 8px
+      &-icon
+        width: 14px
+        height: 14px
+      &-text
+        transition-duration: .4s, 0s
+        transition-property: all, z-index
+        transition-delay: 0s, .4s
+      &:hover &-text
+        z-index: 10
+        opacity: 1
+        box-shadow: 0px 10px 40px rgba(26, 32, 77, 0.15)
+        transition-duration: .4s, 0s
+        transition-delay: 0s, 0s

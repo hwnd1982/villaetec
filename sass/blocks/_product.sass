@@ -1,0 +1,391 @@
+.product
+  padding: 0 0 60px
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 22px
+  &__title
+    max-width: 65%
+    margin-bottom: 0
+  &__labels
+    &-wrap
+      position: relative
+      width: 60px
+      height: 60px
+  &__content
+    display: grid
+    grid-template-columns: 100%
+  &__swiper
+    margin-bottom: 52px
+  &__arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    padding: 4px
+    width: 20px
+    height: 20px
+    border: 1px solid $prime
+    border-radius: 3px
+    background-color: $prime
+    color: #fff
+    transition: .4s
+    &._left
+      margin-right: 11px
+    &._right
+      margin-left: 11px
+      transform: rotate(180deg)
+    &:disabled
+      background-color: #F0F0F0
+      border-color: #F0F0F0
+    &-icon
+      height: 7px
+      width: 4px
+      stroke-width: 2.5px
+
+  &__imgs
+    margin-bottom: 11px
+    &-list
+    &-item
+      position: relative
+      width: 100%
+      padding-bottom: 55.075%
+      overflow: hidden
+  &__img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -o-object-fit: contain
+    object-fit: contain
+    max-width: 100%
+    max-height: 141.888%
+  &__thumbs
+    padding: 2px
+    margin: -2px
+    &-list
+    &-item
+      width: 233.667px
+      margin-right: 9px
+
+      border: 1px solid #EDEDED
+      transition: .4s
+      cursor: pointer
+      &:hover, &.swiper-slide-thumb-active
+        border-color: $prime
+
+    &-wrap
+      display: flex
+      align-items: center
+      max-width: 490px
+      margin: 0 auto
+
+  &__thumb
+    position: relative
+    width: 100%
+    padding-bottom: 69%
+    overflow: hidden
+    &-img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      object-fit: contain
+      max-width: 80%
+  &__info
+
+  &__description
+    margin-bottom: 41px
+    &-text
+      margin-bottom: 12px
+    &-link
+      font-size: 14px
+      line-height: 110%
+      text-decoration-line: underline
+      color: $prime
+      transition: .4s
+      &:hover
+        color: $prime
+        text-decoration-line: underline
+        text-shadow: 0 0 .65px $prime, 0 0 .65px $prime
+
+  &__details
+    margin-bottom: 42px
+    &-header
+      display: flex
+      margin-bottom: 9px
+    &-list
+      display: flex
+    &-item
+    &-btn
+      position: relative
+      +nor7
+      flex-basis: 50%
+      text-align: left
+      font-size: 16px
+      line-height: 140%
+      color: #BFBFBF
+      transition: .4s
+      padding-bottom: 14px
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        border-bottom: 1px solid $prime
+        transition: .4s
+      &:disabled
+        color: $text
+        &::after
+          width: 100%
+      &:hover
+        color: $text
+  &__more
+    font-size: 14px
+    line-height: 110%
+    text-decoration-line: underline
+    color: $prime
+    transition: .4s
+    &:hover
+      color: $prime
+      text-shadow: 0 0 .65px $prime, 0 0 .65px $prime
+
+  &__buying
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__prices
+    display: flex
+    align-items: baseline
+    flex-direction: column-reverse
+    align-items: center
+    flex-shrink: 0
+    margin-bottom: 24px
+
+  &__price
+    +nor7
+    font-size: 32px
+    line-height: 110%
+    color: $prime
+    &::before
+      content: 'От '
+    & + &
+      +nor4
+      font-size: 20px
+      text-decoration-line: line-through
+      color: #ccc
+      margin-right: 0
+      margin-bottom: 1px
+      // &::before
+      //   content: none
+  &__link
+    max-width: 220px
+
+.product-labels
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  flex-direction: column
+  width: max-content
+  &__item
+    flex-shrink: 0
+    position: relative
+    padding: 8px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #F0F0F0
+    border-radius: 5px
+    cursor: pointer
+    &:not(:last-child)
+      margin-bottom: 5px
+    &-icon
+      width: 14px
+      height: 14px
+    &-text
+      position: absolute
+      top: 5px
+      right: 5px
+      white-space: nowrap
+      padding: 9px 10px 9px 9px
+      font-size: 10px
+      line-height: 120%
+      background-color: #fff
+      border-radius: 5px
+      opacity: 0
+      z-index: -10
+      transition-duration: .4s, 0s
+      transition-property: all, z-index
+      transition-delay: 0s, .4s
+    &:hover &-text
+      z-index: 10
+      opacity: 1
+      box-shadow: 0px 10px 40px rgba(26, 32, 77, 0.15)
+      transition-duration: .4s, 0s
+      transition-delay: 0s, 0s
+
+.characteristics
+  &__list
+    &-wrap
+      margin-bottom: 16px
+    &>:nth-child(n + 5)
+      display: none
+    &._show
+      &>:nth-child(n + 5)
+        display: flex
+
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    padding: 17px 0
+    border-bottom: 1px solid #F0F0F0
+  &__name
+    font-size: 14px
+    line-height: 110%
+  &__value
+    +nor7
+    font-size: 14px
+    line-height: 110%
+
+.documentation
+  margin-bottom: -2px
+  &__list
+    &-wrap
+      margin-bottom: 18px
+    &>:nth-child(n + 4)
+      display: none
+    &._show
+      &>:nth-child(n + 4)
+        display: block
+  &__item
+    &:not(:last-child)
+      margin-bottom: 5px
+
+  &__link
+    display: flex
+    height: 60px
+    align-items: center
+    justify-content: space-between
+    padding: 14px 20px 14px 43px
+    background-image: url(../img/icons/documentation.png)
+    background-repeat: no-repeat
+    background-size: 20px 20px
+    background-position: left 16px center
+    border: 1px solid #EDEDED
+    border-radius: 5px
+    font-size: 14px
+    line-height: 110%
+    color: $text
+    transition: .4s
+
+    &:hover
+      color: $text
+      border-color: $prime
+  &__file
+    &-name
+      flex-basis: 190px
+    &-format
+      +nor7
+      font-size: 14px
+      line-height: 110%
+      text-align: right
+      color: #D9D9D9
+
+@media screen and ( min-width: 576px )
+  .product
+    &__buying
+      flex-direction: row
+      justify-content: space-between
+    &__link
+      max-width: 300px
+    &__prices
+      align-items: flex-start
+      justify-content: flex-start
+      margin-right: 33px
+      margin-bottom: 0
+
+@media screen and ( min-width: 768px )
+  .product
+    padding: 0 0 49px
+    &__header
+      margin-bottom: 31px
+    &__imgs
+      margin-bottom: 10px
+    &__img
+      max-height: 125.888%
+    &__arrow
+      width: 30px
+      height: 30px
+      &-icon
+        height: 8px
+        width: 4px
+    &__details
+      margin-bottom: 50px
+      &-btn
+        padding-bottom: 15px
+    &__description
+      margin-bottom: 46px
+
+  .characteristics
+    &__list
+      &-wrap
+        margin-bottom: 13px
+  .documentation
+    margin-bottom: 0
+    &__link
+      padding: 14px 20px 14px 50px
+      background-position: left 18px center
+
+  .product-labels
+    flex-direction: row
+    &__item
+      padding: 16px
+      &:not(:last-child)
+        margin-bottom: 0
+        margin-right: 20px
+
+      &-icon
+        width: 28px
+        height: 28px
+
+@media screen and ( min-width: 992px )
+  .product
+    &__labels
+      &-wrap
+        width: 60px
+        height: 60px
+    &__content
+      grid-template-columns: 55% 45%
+    &__swiper
+      padding-top: 10px
+    &__imgs
+      &-item
+        padding-bottom: 85%
+    &__img
+      max-height: 100%
+    &__info
+      justify-self: end
+      max-width: 375px
+
+@media screen and ( min-width: 1200px )
+  .product
+    &__imgs
+      &-item
+        padding-bottom: 68%
+    &__info
+      max-width: 438px
+
+@media screen and ( min-width: 1400px )
+  .product
+    &__content
+      grid-template-columns: 62% 38%
+    &__img
+      max-height: 142%
+    &__imgs
+      &-item
+        padding-bottom: 53.75%

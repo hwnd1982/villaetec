@@ -1,0 +1,92 @@
+.related-goods
+  background-color: #F9F9F9
+  padding: 60px 0 70px
+  &__title
+    text-align: center
+    margin-bottom: 35px
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    justify-content: center
+    gap: 5px
+  &__description
+    max-width: 85%
+  &__link
+    grid-area: link
+    max-width: 300px
+    justify-self: center
+    padding: 22px 20px 19px
+  &__swiper
+    grid-area: swiper
+    margin: 0
+    &-controls
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 30px 0 40px
+  &__item
+    max-width: 100%
+  &__arrow
+    padding: 4.215px 11px
+    border: 1px solid $prime
+    border-radius: 3px
+    background-color: $prime
+    color: #fff
+    transition: .4s
+    &._left
+      margin-right: 7.5px
+    &._right
+      margin-left: 7.5px
+      transform: rotate(180deg)
+    &:disabled
+      background-color: #F0F0F0
+      border-color: #F0F0F0
+    &-icon
+      stroke-width: 2.5px
+
+@media screen and ( min-width: 480px )
+  .related-goods
+    &__list
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr))
+
+@media screen and ( min-width: 576px )
+  .related-goods
+    &__list
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+      gap: 10px
+
+@media screen and ( min-width: 768px )
+  .related-goods
+    padding: 93px 0 100px
+    &-title
+      margin-bottom: 32px
+    &__list
+      grid-template-columns: repeat(auto-fill, 250px)
+      gap: 20px
+    &__header
+      padding-bottom: 70px
+    &__description
+      max-width: 450px
+    &__swiper
+      margin-bottom: 60px
+      &-controls
+        display: none
+
+@media screen and ( min-width: 992px )
+  .related-goods
+    &__list
+      gap: 30px
+    &__swiper
+      overflow: visible
+      margin-bottom: 0
+    &__link
+      padding: 20px 20px 19px
+    &__title
+      margin-bottom: 52px
+
+@media screen and ( min-width: 1200px )
+  .related-goods
+    &__description
+      margin-bottom: 46px
+    &__link
+      justify-self: start

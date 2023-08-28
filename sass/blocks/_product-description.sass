@@ -1,0 +1,76 @@
+.product-description
+  padding: 56px 0 60px
+  background-color: #fff
+  &__container
+    display: grid
+    // grid-template-columns: 400px 1fr
+    grid-template-areas: 'content' 'img'
+    align-items: start
+    gap: 36px
+  &__content
+    grid-area: content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    // max-width: 85%
+    max-width: 630px
+  &__title
+    margin-bottom: 26px
+    max-width: 65%
+    text-align: center
+  &__text
+    &:not(:last-child)
+      margin-bottom: 18px
+  &__img
+    position: absolute
+    top: -23px
+    left: 0
+    right: 0
+    bottom: 0
+    max-height: 116%
+    width: 100%
+    object-fit: contain
+
+    &-wrap
+      grid-area: img
+      position: relative
+      width: 100%
+      border: 1px solid #F0F0F0
+      padding-bottom: 80%
+      overflow: hidden
+
+@media screen and ( min-width: 768px )
+  .product-description
+    padding: 100px 0
+
+@media screen and ( min-width: 992px )
+  .product-description
+    &__container
+      gap: 50px
+    &__title
+      margin-bottom: 23px
+      text-align: left
+    &__text
+      &:not(:last-child)
+        margin-bottom: 23px
+    &__content
+      align-items: flex-start
+    &__container
+      grid-template-columns: 400px 1fr
+      grid-template-areas: 'img content'
+    &__img
+      &-wrap
+        padding-bottom: 120%
+
+@media screen and ( min-width: 1200px )
+  .product-description
+    &__container
+      grid-template-columns: 500px 1fr
+    &__img
+      top: -33px
+      left: 22px
+      right: 0
+      bottom: 0
+      &-wrap
+        padding-bottom: 80%

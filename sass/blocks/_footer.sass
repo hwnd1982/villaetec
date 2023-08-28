@@ -1,5 +1,5 @@
 .footer
-  padding: 41px 0 34px
+  padding: 40px 0 34px
   background-color: #F5F5F5
   &__container
   &__top
@@ -9,8 +9,6 @@
     grid-template-areas: 'catalog' 'nav' 'contacts'
   &__contacts
     grid-area: contacts
-    padding-top: 5px
-
     display: flex
     flex-direction: column
     align-items: center
@@ -35,7 +33,7 @@
       &:hover
         color: $prime
     &-item
-      margin-bottom: 24.4px
+      margin-bottom: 25px
       &:last-child
         margin-bottom: 0
   &__bottom
@@ -173,17 +171,19 @@
       padding-bottom: 38px
     &__contacts
       align-items: flex-start
+      padding-top: 3px
+      border-top: none
     &__nav
       margin-bottom: 40px
       &-link
         text-align: left
-      &-item
-        margin-bottom: 20px
+      // &-item
+        // margin-bottom: 20px
     &__bottom
       padding-top: 30px
 
   .footer-catalog
-    padding: 20px 0 60px
+    padding: 23px 0 60px
     grid-template-columns: repeat(3, minmax(180px, 1fr))
     gap: 0
     &__list
@@ -199,7 +199,10 @@
       &:not(:last-child)
         margin-bottom: 7px
       &-list
-        padding: 12px 35px 2px 10px
+        padding: 12px 35px 4px 10px
+  .contacts
+    &__item
+      margin-bottom: 18px
 
 @media screen and ( min-width: 992px )
   .footer

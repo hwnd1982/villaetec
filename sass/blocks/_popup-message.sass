@@ -1,0 +1,52 @@
+.popup-message
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 300px
+
+  &__icon
+    color: $prime
+    margin-bottom: 33px
+    flex-shrink: 0
+  &__title
+    text-align: center
+    +nor7
+    font-size: 26px
+    line-height: 110%
+    margin-bottom: 14px
+    max-width: 65%
+    &:last-child
+      margin-bottom: 0
+  &__text
+    text-align: center
+    line-height: 130%
+
+  .requisition-sent &
+    height: 252px
+    padding-top: 15px
+  .question-sent &
+    height: 252px
+    padding-top: 11px
+    &__text
+      max-width: 85%
+  .subscribed &
+    height: 232px
+    padding-top: 9px
+
+@media screen and ( min-width: 768px )
+  .popup-message
+    width: 330px
+
+    .requisition-sent &
+      height: 272px
+      padding-top: 30px
+    .question-sent &
+      height: 282px
+      padding-top: 22px
+    .subscribed &
+      height: 252px
+      padding-top: 30px
+
+    &__title
+      font-size: 30px

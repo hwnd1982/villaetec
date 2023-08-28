@@ -1,0 +1,125 @@
+.goods-search
+  padding-bottom: 33px
+  background-color: #FAFAFA
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    margin-bottom: 25px
+    text-align: center
+  &__list
+    display: grid
+    width: 100%
+    justify-content: center
+    grid-template-columns: repeat(auto-fit, minmax(169px, 1fr))
+    gap: 5px
+    &:hover
+      z-index: 10
+  &__item
+  &__search
+    max-width: 690px
+    margin-bottom: 39px
+  &__query
+    +nor7
+    text-align: center
+    font-size: 20px
+    line-height: 110%
+    margin-bottom: 26px
+    &-link
+      position: relative
+      color: $prime
+      transition: .4s
+      &::after
+        content: ''
+        position: absolute
+        bottom: 2px
+        left: 0
+        right: 0
+        border-bottom: 2px solid currentColor
+      &:hover
+        color: $text
+  &__link
+    color: $prime
+    font-size: 16px
+    transition: .4s
+    &-wrap
+      display: flex
+      width: 100%
+      justify-content: center
+      padding: 21px 0
+      z-index: 5
+    &:hover
+      color: $prime
+      text-shadow: 0 0 .65px currentColor, 0 0 .65px currentColor
+
+.empty-search
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  padding: 55px 0 103px
+  max-width: 300px
+  &__title
+    font-size: 30px
+    margin-bottom: 15px
+  &__text
+    max-width: 210px
+    margin-bottom: 27px
+    line-height: 110%
+  &__title, &__text
+    text-align: center
+  &__links
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+  &__link
+    flex-shrink: 0
+    max-width: 300px
+    &:not(:last-child)
+      margin: 0 0 12px
+
+@media screen and ( min-width: 576px )
+  .goods-search
+    &__list
+      gap: 10px
+
+@media screen and ( min-width: 768px )
+  .goods-search
+    padding-bottom: 65px
+    &__title
+      margin-bottom: 30px
+    &__list
+      grid-template-columns: repeat(auto-fit, 250px)
+      gap: 20px
+    &__query
+      font-size: 30px
+      margin-bottom: 35px
+    &__search
+      margin-bottom: 60px
+    &__link
+      &-wrap
+        padding: 30px 0
+
+  .empty-search
+    max-width: none
+    padding: 109px 0 106px
+    &__title
+      max-width: 450px
+      font-size: 44px
+      margin-bottom: 25px
+    &__text
+      max-width: none
+      margin-bottom: 24px
+    &__links
+      flex-direction: row
+      justify-content: center
+    &__link
+      &:not(:last-child)
+        margin: 0 30px 0 0
+
+@media screen and ( min-width: 992px )
+  .goods-search
+    &__list
+      gap: 30px

@@ -1,0 +1,57 @@
+.news-page
+  padding-bottom: 63px
+  background-color: #FAFAFA
+  &__container
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 850px
+    margin: 0 auto
+  &__data
+    margin-bottom: 5px
+    font-size: 14px
+    text-align: center
+    color: #B1B1B1
+  &__title
+    max-width: 600px
+    text-align: center
+    margin-bottom: 25px
+  &__text
+    &:not(:last-child)
+      margin-bottom: 22.8px
+    &-block
+      margin-bottom: 35px
+  &__img
+    margin-bottom: 44px
+  &__video
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    &-wrap
+      position: relative
+      width: 100%
+      padding-bottom: calc( 477 / 850 * 100%)
+
+@media screen and ( min-width: 576px )
+  .news-page
+    &__title
+      margin-bottom: 42px
+    &__img
+      margin-bottom: 60px
+
+@media screen and ( min-width: 992px )
+  .news-page
+    padding-bottom: 114px
+    &__text
+      &:not(:last-child)
+        margin-bottom: 20.4px
+      &-block
+        margin-bottom: 54px
+    &__video
+      &-wrap
+        margin-top: 5px

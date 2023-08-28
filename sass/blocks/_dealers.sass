@@ -3,6 +3,8 @@
   padding: 56px 0 100%
   padding-left: 10px
   overflow: hidden
+  &._main
+    background-color: #F9F9F9
   &__container
     display: flex
     flex-direction: column
@@ -85,5 +87,5 @@
       transform: translateX(-50%)
 
   .region
-    &:hover
+    &:hover, &._active
       fill-opacity: 0.3

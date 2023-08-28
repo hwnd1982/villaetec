@@ -1,0 +1,52 @@
+.subcategory
+  background-color: #fafafa
+  padding: 0 0 30px
+  &__title
+    text-align: center
+    margin-bottom: 34px
+  &__content
+    display: grid
+    width: 100%
+    gap: 20px
+    // grid-template-columns: 1fr 1090px
+    // justify-content: center
+  &__list
+    position: relative
+    display: grid
+    width: 100%
+    justify-content: center
+    grid-template-columns: repeat(auto-fit, minmax(169px, 1fr))
+    gap: 5px
+  &__pagination
+    position: relative
+    padding: 30px 0
+    z-index: 5
+
+@media screen and ( min-width: 768px )
+  .subcategory
+    &__title
+      margin-bottom: 51px
+    &__content
+      gap: 35px
+      // grid-template-columns: 206px 1fr
+    &__list
+      display: grid
+      width: 100%
+      justify-content: end
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr))
+      gap: 10px
+
+@media screen and ( min-width: 992px )
+  .subcategory
+    padding: 0 0 69px
+    &__content
+      grid-template-columns: 240px 1fr
+      gap: 35px
+    &__list
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+
+@media screen and ( min-width: 1200px )
+  .subcategory
+    &__content
+      grid-template-columns: 206px 1fr
+      gap: 55px
